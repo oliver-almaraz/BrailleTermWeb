@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <title>BrailleTerm Online</title>
+    <style>
+    p {text-align: center;}
+    h1 {text-align: center;}
+    h3 {text-align: center;}
+    h5 {
+        text-align: center;
+        font-family: Courier;
+    }
+    div {text-align: center;}
+    </style>
+    </head>
+
+    <body>
+        <h1>¡Bienvenido a la versión en línea de BrailleTerm!</h1>
+        <h3>Un juego que permite a usuarios videntes repasar fácilmente la signografía básica braille del español.</h2>
+        <hr>
+
+        <p><label>Elige qué signos quieres repasar:</label></p>
+        <div>
+            <select name="opcion" id="opcion">
+                <option disabled>───────── Una sola fila ─────────</option>
+                <option value="1a">Estudiar las letras solo de la 1° fila (a - j)</option>
+                <option value="2a">Estudiar las letras solo de la 2° fila (k - t)</option>
+                <option value="3a">Estudiar las letras solo de la 3° fila (u - z)</option>
+                <option value="diacriticos">Estudiar las letras solo de la 4° fila (ñ, tildes y diéresis)</option>
+                <option value="puntuacion"">Estudiar solo los signos de puntuación (más usados)</option>
+                <option value="numeros">Estudiar solo los números (0 - 9)</option>
+
+                <option disabled>───────── Filas múltiples ─────────</option>
+                <option value="1-2">Estudiar las filas 1 y 2</option>
+                <option value="1-3">Estudiar las filas 1, 2 y 3</option>
+                <option value="1-4">Estudiar las 4 filas</option>
+                <option value="1-5">Estudiar todo el alfabeto y los signos de puntuación</option>
+                <option value="1-6">Estudiar alfabeto, signos de puntuación y números</option>
+            </select>
+        </div>
+
+        <p><label id="mensaje"></label></p>
+        <h5><label id="letra"><br/>· ·<br/>· ·<br/>· ·<br/></label></h5>
+        <p><label id="veredicto">Presiona 'Siguiente' para mostrar un signo braille</label></p>
+        <p>
+            <label for="respuesta">Tu respuesta:</label>
+            <input type="text" name="respuesta" id="respuesta">
+        </p>
+        <p><input type="Submit" onclick="evaluar()" value="Evaluar"></p>
+        <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
+        <hr>
+
+
+
+
+<!-- Código JavaScript al final para no retrasar el render de la página -->
+        <script src="BrailleTerm.js"></script>
+
+
+    </body>
+</html>
