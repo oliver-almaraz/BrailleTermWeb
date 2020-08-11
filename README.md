@@ -1,4 +1,4 @@
-# BrailleTerm Online
+# BrailleTerm Web
 
 Esta es la **versión web** de [BrailleTerm](https://github.com/oliver-almaraz/BrailleTermGUI).
 Este programa es parte de un proyecto sin fines de lucro, se trata en general de un curso gratuito para
@@ -19,7 +19,7 @@ Por último, en lugar de hacer una aplicación móvil para Android e iOS decidí
 
 #### También es posible usar la aplicación web sin conexión a internet (offline).
 
-Si prefieres la aplicación web a la aplicación para escritorio (y no te culpo), pero no siempre tienes acceso a internet, puedes utilizar **BralleTerm Online** desde tu computadora aun sin conección.
+Si prefieres la aplicación web a la aplicación para escritorio (y no te culpo), pero no siempre tienes acceso a internet, puedes utilizar **BralleTerm Web** desde tu computadora aun sin conección.
 Para ello, [descarga el código fuente](https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip) de esta aplicación, y abre el archivo **index.html** con tu navegador
 (click derecho, 'abrir con').
 
