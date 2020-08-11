@@ -17,7 +17,7 @@ const todasLasFilas = {
 }
 
 function generarNumAleatorio(r1,r2) {
-    //Retorna un número aleatorio entre r1 y r2 (ambos parámetros incluidos)
+    //Retorna un número entero aleatorio entre r1 y r2 (ambos parámetros incluidos)
     return Math.floor(Math.random() * (r2 +1 - r1) ) + r1;
 }
 
@@ -77,7 +77,6 @@ function siguiente() {
         rango[0] = 1;
         rango[1] = 43;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
-
     }
     else if (seleccion == "1-6") {
         rango[0] = 1;
@@ -89,8 +88,7 @@ function siguiente() {
     document.getElementById("respuesta").value = "";
 }
 function evaluar() {
-    //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva
-    //letra si la respuesta fue correcta.
+    //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.
     var inputRespuesta = document.getElementById("respuesta").value;
     if (respuesta[0] == 0) {
         document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
