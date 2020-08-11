@@ -18,7 +18,7 @@ const todasLasFilas = {
 
 function generarNumAleatorio(r1,r2) {
     //Retorna un número aleatorio entre r1 y r2 (ambos parámetros incluidos)
-    return Math.floor(Math.random() * (r2 - r1) ) + r1;
+    return Math.floor(Math.random() * (r2 +1 - r1) ) + r1;
 }
 
 function generarLetra() {
