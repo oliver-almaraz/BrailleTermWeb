@@ -97,7 +97,7 @@ function evaluar() {
     if (respuesta[0] == 0) {
         document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
     }
-    else if (inputRespuesta == respuesta[0]) {
+    else if (inputRespuesta == respuesta[0] || inputRespuesta.toLowerCase() == respuesta[0]) {
         document.getElementById("veredicto").innerHTML = "<em>¡Correcto! ¿Y ahora?</em>";
         generarLetra();
         document.getElementById("respuesta").value = "";
