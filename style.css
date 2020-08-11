@@ -1,0 +1,38 @@
+html {
+    text-align: center;
+    background-color: #04050a;
+    color: #489aba;
+}
+strong {
+    color: #04FF00;
+    text-shadow: 0.5px 0.5px 10px #04FF00;
+}
+em {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    text-shadow: 0.5px 0.5px 10px #00CDFF
+}
+h5 {
+    font-family: Courier;
+    font-size: 20px;
+}
+select {
+    background-color: #141414;
+    border-color: #00CDFF;
+    border-radius: 4px;
+    padding: 6px 18px;
+    color: #00CDFF;
+}
+div:hover,
+div:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.1em);
+}
+input {
+    background-color: #141414;
+    border-color: #00CDFF;
+    color: #00CDFF;
+    padding: 6px 18px;
+    border-radius: 4px;
+}
