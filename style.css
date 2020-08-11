@@ -9,6 +9,7 @@ h1 {
 }
 h2 {
     font-size: 16px;
+    font-weight: normal;
 }
 p {font-size: 14px}
 em {
@@ -21,6 +22,7 @@ h5 {
     font-family: Courier;
     font-size: 20px;
 }
+a {color: #489aba}
 select {
     background-color: #141414;
     border-color: #00CDFF;
