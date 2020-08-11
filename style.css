@@ -4,8 +4,8 @@ html {
     color: #489aba;
 }
 h1 {
-    color: #FF7105;
-    text-shadow: 2px 2px 10px #FB520F;
+    color: #00CDFF;
+    text-shadow: 0.5px 0.5px 10px #018791;
     font-size: 30px
 }
 h3 {
@@ -17,7 +17,7 @@ em {
     font-weight: bold;
     font-style: normal;
     font-size: 18px;
-    text-shadow: 0.5px 0.5px 10px #00CDFF
+    text-shadow: 0.5px 0.5px 10px #018791;
 }
 h5 {
     font-family: Courier;
