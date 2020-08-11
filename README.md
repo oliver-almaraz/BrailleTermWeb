@@ -15,13 +15,14 @@ empaqueté como un [binario (.exe) para Windows](https://github.com/oliver-almar
 Por último, en lugar de hacer una aplicación móvil para Android e iOS decidí mejor hacer **esta versión web** (con JavaScript)
 **optimizada para navegadores móviles**.
 
-### [Acceder a la aplicación web](https://oliver-almaraz.github.io/BrailleTermWeb/) 
+## [Acceder a la aplicación web](https://oliver-almaraz.github.io/BrailleTermWeb/) 
 
 #### También es posible usar la aplicación web sin conexión a internet (offline).
 
 Si prefieres la aplicación web a la aplicación para escritorio (y no te culpo), pero no siempre tienes acceso a internet, puedes utilizar **BralleTerm Online** desde tu computadora aun sin conección.
-Para ello, [descarga el código fuente](https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip) de esta aplicación, y abre el archivo **index.html* con tu navegador.
-(Click derecho, 'abrir con').
+Para ello, [descarga el código fuente](https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip) de esta aplicación, y abre el archivo **index.html** con tu navegador
+(click derecho, 'abrir con').
+
 **Nota:** Es importante que todos los archivos que se descargan junto con el fichero **index.html** estén en la misma carpeta.
 
 #### Captura de pantalla:
