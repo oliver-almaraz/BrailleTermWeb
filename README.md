@@ -1,6 +1,6 @@
-# BrailleTermGUI
+# BrailleTerm Online
 
-Esta es la versión web de [BrailleTerm](https://github.com/oliver-almaraz/BrailleTermGUI).
+Esta es la *versión web* de [BrailleTerm](https://github.com/oliver-almaraz/BrailleTermGUI).
 Este programa es parte de un proyecto sin fines de lucro, se trata en general de un curso gratuito para
 aprender signografía básica del braille en español destinado a usuarios videntes.
 
