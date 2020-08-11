@@ -24,7 +24,7 @@ h5 {
 }
 a {color: #489aba}
 select {
-    background-color: #141414;
+    background-color: #04050a;
     border-color: #00CDFF;
     border-radius: 4px;
     padding: 6px 18px;
@@ -36,7 +36,7 @@ div:focus {
   transform: translateY(-0.1em);
 }
 input {
-    background-color: #141414;
+    background-color: #04050a;
     border-color: #00CDFF;
     color: #00CDFF;
     padding: 6px 18px;
