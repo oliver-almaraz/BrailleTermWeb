@@ -9,7 +9,7 @@ const todasLasFilas = {
     //Tercera fila (u-z // 21-26)
     21:["u","<br/>O ·<br/>· ·<br/>O O<br/>"],22:["v","<br/>O ·<br/>O ·<br/>O O<br/>"],23:["w","<br/>· O<br/>O O<br/>· O<br/>"],24:["x","<br/>O O<br/>· ·<br/>O O<br/>"],25:["y","<br/>O O<br/>· O<br/>O O<br/>"],26:["z","<br/>O ·<br/>· O<br/>O O<br/>"],
     //Signos diacríticos (27-33)
-    27:["ñ","<br/>O O<br/>O O<br/>· O<br/>"],28:["a´","<br/>O ·<br/>O O<br/>O O<br/>"],29:["e´","<br/>· O<br/>O ·<br/>O O<br/>"],30:["i´","<br/>· O<br/>· ·<br/>O ·<br/>"],31:["o´","<br/>· O<br/>· ·<br/>O O<br/>"],32:["u´","<br/>· O<br/>O O<br/>O O<br/>"],33:["u¨","<br/>O ·<br/>O O<br/>· O<br/>"],
+    27:["ñ","<br/>O O<br/>O O<br/>· O<br/>"],28:["á","<br/>O ·<br/>O O<br/>O O<br/>"],29:["é","<br/>· O<br/>O ·<br/>O O<br/>"],30:["í","<br/>· O<br/>· ·<br/>O ·<br/>"],31:["ó","<br/>· O<br/>· ·<br/>O O<br/>"],32:["ú","<br/>· O<br/>O O<br/>O O<br/>"],33:["ü","<br/>O ·<br/>O O<br/>· O<br/>"],
     //Puntuación (34-43)
     34:[".","<br/>· ·<br/>· ·<br/>O ·<br/>"],35:[",","<br/>· ·<br/>O ·<br/>· ·<br/>"],36:[";","<br/>· ·<br/>O ·<br/>O ·<br/>"],37:[":","<br/>· ·<br/>O O<br/>· ·<br/>"],38:["?","<br/>· ·<br/>O ·<br/>· O<br/>"],39:["!","<br/>· ·<br/>O O<br/>O ·<br/>"],40:["(","<br/>O ·<br/>O ·<br/>· O<br/>"],41:[")","<br/>· O<br/>· O<br/>O ·<br/>"],42:["-","<br/>· ·<br/>· ·<br/>O O<br/>"],43:["*","<br/>· ·<br/>· O<br/>O ·<br/>"],
     //Números (44-53)
@@ -51,12 +51,11 @@ function siguiente() {
     else if (seleccion == "diacriticos") {
         rango[0] = 27;
         rango[1] = 33;
-        document.getElementById("mensaje").innerHTML = "Al responder, escribe primero la letra sola y luego la tilde o la diéresis.<br/>Para ello presiona la tecla que contiene el signo diacrítico<br/>(después de <em>Shift</em> si es necesario) y luego la barra de espacio.<br/>Por ejemplo: u¨  /  a´";
     }
     else if (seleccion == "puntuacion") {
         rango[0] = 34;
         rango[1] = 43;
-        document.getElementById("mensaje").innerHTML = "En el caso de '¿?' y de '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'."
+        document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
     }
     else if (seleccion == "numeros") {
         rango[0] = 44;
@@ -73,18 +72,17 @@ function siguiente() {
     else if (seleccion == "1-4") {
         rango[0] = 1;
         rango[1] = 33;
-        document.getElementById("mensaje").innerHTML = "Al responder, escribe primero la letra sola y luego la tilde o la diéresis.<br/>Para ello presiona la tecla que contiene el signo diacrítico<br/>(después de <em>Shift</em> si es necesario) y luego la barra de espacio.<br/>Por ejemplo: u¨  /  a´";
     }
     else if (seleccion == "1-5") {
         rango[0] = 1;
         rango[1] = 43;
-        document.getElementById("mensaje").innerHTML = "Al responder, escribe primero la letra sola y luego la tilde o la diéresis.<br/>Para ello presiona la tecla que contiene el signo diacrítico<br/>(después de <em>Shift</em> si es necesario) y luego la barra de espacio.<br/>Por ejemplo: u¨  /  a´<br/>En el caso de '¿?' y de '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
+        document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
 
     }
     else if (seleccion == "1-6") {
         rango[0] = 1;
         rango[1] = 53;
-        document.getElementById("mensaje").innerHTML = "Al responder, escribe primero la letra sola y luego la tilde o la diéresis.<br/>Para ello presiona la tecla que contiene el signo diacrítico<br/>(después de <em>Shift</em> si es necesario) y luego la barra de espacio.<br/>Por ejemplo: u¨  /  a´<br/>En el caso de '¿?' y de '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
+        document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
     }
     generarLetra();
     document.getElementById("veredicto").innerHTML = "<em>¿Qué letra, número, o signo de puntuación es?</em>";
