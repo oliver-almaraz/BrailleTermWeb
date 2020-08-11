@@ -8,6 +8,13 @@ Mi finalidad era crear un programa simple que funcionara en casi cualquier plata
 enfoqué en crear un [script que se ejecutara desde la terminal](https://github.com/oliver-almaraz/BrailleTerm) (de ahí el nombre del programa, 'BrailleTerm').
 Sin embargo, no consideré que, al estar escrito en Python (3.8), los usuarios de Windows tendrían que descargar el intérprete.
 
+
+## [Acceder a la aplicación web](https://oliver-almaraz.github.io/BrailleTermWeb/) 
+
+
+
+### Versiones para escritorio (Windows, Linux y MacOS)
+
 Estando consciente de que la mayoría de los participantes del curso al que está dedicado este programa
 usarían Windows, me tomé el tiempo para hacer también una [versión con una interfaz gráfica](https://github.com/oliver-almaraz/BrailleTermGUI) y lo
 empaqueté como un [binario (.exe) para Windows](https://github.com/oliver-almaraz/BrailleTermGUI/releases/tag/Win_v1.0) y como un [ejecutable para Linux](https://github.com/oliver-almaraz/BrailleTermGUI/releases/tag/Linux_v1.0).
@@ -15,7 +22,6 @@ empaqueté como un [binario (.exe) para Windows](https://github.com/oliver-almar
 Por último, en lugar de hacer una aplicación móvil para Android e iOS decidí mejor hacer **esta versión web** (con JavaScript)
 **optimizada para navegadores móviles**.
 
-## [Acceder a la aplicación web](https://oliver-almaraz.github.io/BrailleTermWeb/) 
 
 #### También es posible usar la aplicación web sin conexión a internet (offline).
 
