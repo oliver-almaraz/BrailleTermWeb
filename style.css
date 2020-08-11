@@ -3,10 +3,14 @@ html {
     background-color: #04050a;
     color: #489aba;
 }
-strong {
+h1 {
     color: #04FF00;
     text-shadow: 0.5px 0.5px 10px #04FF00;
 }
+h2 {
+    font-size: 16px;
+}
+p {font-size: 14px}
 em {
     font-weight: bold;
     font-style: normal;
