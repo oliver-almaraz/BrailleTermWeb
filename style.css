@@ -6,6 +6,7 @@ html {
 h1 {
     color: #04FF00;
     text-shadow: 0.5px 0.5px 10px #04FF00;
+    font-size: 24px
 }
 h3 {
     font-size: 18px;
@@ -31,6 +32,7 @@ select {
     border-color: #00CDFF;
     border-radius: 4px;
     padding: 6px 18px;
+    font-size: 14px;
     color: #00CDFF;
 }
 div:hover,
@@ -44,6 +46,7 @@ input {
     color: #00CDFF;
     padding: 6px 18px;
     border-radius: 4px;
+    font-size: 14px;
 }
 hr {
     background-color: #6F05F0;
