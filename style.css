@@ -11,7 +11,7 @@ h3 {
     font-size: 16px;
     font-weight: normal;
 }
-p {font-size: 14px}
+p {font-size: 16px}
 em {
     font-weight: bold;
     font-style: normal;
@@ -24,7 +24,7 @@ h5 {
 }
 a {
     color: #489aba;
-    font-size: 12px;
+    font-size: 14px;
 }
 select {
     background-color: #04050a;
