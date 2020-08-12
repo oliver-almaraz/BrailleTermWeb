@@ -62,9 +62,20 @@ hr {
     border-color: #B882F9;
     box-shadow: 0px 0px 10px #6F05F0;
 }
-::placeholder, /* Firefox, Chrome, Opera */
+::placeholder { /* Firefox, Chrome, Opera */
+    color: #489aba;
+    text-align: center;
+}
+::-moz-placeholder {
+    color: #489aba;
+    text-align: center;
+}
+::-webkit-input-placeholder {
+    color: #489aba;
+    text-align: center;
+}
 :-ms-input-placeholder, /* Internet Explorer 10-11 */
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #489aba;
     text-align: center;
- }
+}
