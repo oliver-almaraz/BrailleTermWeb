@@ -73,6 +73,8 @@ function siguiente() {
         rango[1] = 53;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
     } else if (seleccion == "none selected") {
+        rango[0] = 0;
+        rango[1] = 0;
         document.getElementById("mensaje").innerHTML = "Por favor elige una o varias filas para repasar.";
     }
     generarLetra();
