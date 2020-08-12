@@ -54,6 +54,6 @@ select:hover {
     transition: all 0.2s ease #018791;
   }
 hr {
-    background-color: #FFFFFF;
+    border-color: #B882F9;
     box-shadow: 0px 0px 10px #6F05F0;
 }

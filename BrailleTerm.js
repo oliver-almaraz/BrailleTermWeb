@@ -39,49 +39,41 @@ function siguiente() {
     if (seleccion == "1a") {
         rango[0] = 1;
         rango[1] = 10;
-    }
-    else if (seleccion == "2a") {
+    } else if (seleccion == "2a") {
         rango[0] = 11;
         rango[1] = 20;
-    }
-    else if (seleccion == "3a") {
+    } else if (seleccion == "3a") {
         rango[0] = 21;
         rango[1] = 26;
-    }
-    else if (seleccion == "diacriticos") {
+    } else if (seleccion == "diacriticos") {
         rango[0] = 27;
         rango[1] = 33;
-    }
-    else if (seleccion == "puntuacion") {
+    } else if (seleccion == "puntuacion") {
         rango[0] = 34;
         rango[1] = 43;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
-    }
-    else if (seleccion == "numeros") {
+    } else if (seleccion == "numeros") {
         rango[0] = 44;
         rango[1] = 53;
-    }
-    else if (seleccion == "1-2") {
+    } else if (seleccion == "1-2") {
         rango[0] = 1;
         rango[1] = 20;
-    }
-    else if (seleccion == "1-3") {
+    } else if (seleccion == "1-3") {
         rango[0] = 1;
         rango[1] = 26;
-    }
-    else if (seleccion == "1-4") {
+    } else if (seleccion == "1-4") {
         rango[0] = 1;
         rango[1] = 33;
-    }
-    else if (seleccion == "1-5") {
+    } else if (seleccion == "1-5") {
         rango[0] = 1;
         rango[1] = 43;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
-    }
-    else if (seleccion == "1-6") {
+    } else if (seleccion == "1-6") {
         rango[0] = 1;
         rango[1] = 53;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
+    } else if (seleccion == "none selected") {
+        document.getElementById("mensaje").innerHTML = "Por favor elige una o varias filas para repasar.";
     }
     generarLetra();
     document.getElementById("veredicto").innerHTML = "<em>¿Qué letra, número, o signo de puntuación es?</em>";
@@ -89,7 +81,7 @@ function siguiente() {
 }
 
 function evaluar() {
-    //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.
+    //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.    
     var inputRespuesta = document.getElementById("respuesta").value;
     if (respuesta[0] == 0) {
         document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
@@ -100,7 +92,12 @@ function evaluar() {
         document.getElementById("respuesta").value = "";
     } 
     else {
-        document.getElementById("veredicto").innerHTML = `<em>Respuesta incorrecta, la respuesta era ' ${respuesta[0]} '.</em>`;
+        document.getElementById("veredicto").innerHTML = `<em>Incorrecto, la respuesta era ' ${respuesta[0]} '.</em>`;
+    }
+        
+    var mensaje = document.getElementById("mensaje").innerHTML;
+    if ( mensaje == "Por favor elige una o varias filas para repasar.") {
+        document.getElementById("mensaje").innerHTML = " ";
     }
 }
 

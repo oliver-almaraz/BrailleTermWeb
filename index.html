@@ -20,10 +20,10 @@
         
         <hr>
 
-        <p><label>Elige qué signos quieres repasar:</label></p>
         <select name="opcion" id="opcion">
+            <option value="none selected" selected="selected">Elige qué signos quieres repasar:</option>
             <option disabled>──── Una sola fila ────</option>
-            <option value="1a" selected>Estudiar las letras solo de la 1° fila (a - j)</option>
+            <option value="1a">Estudiar las letras solo de la 1° fila (a - j)</option>
             <option value="2a">Estudiar las letras solo de la 2° fila (k - t)</option>
             <option value="3a">Estudiar las letras solo de la 3° fila (u - z)</option>
             <option value="diacriticos">Estudiar las letras solo de la 4° fila (ñ, tildes y diéresis)</option>
@@ -38,14 +38,14 @@
             <option value="1-6">Estudiar alfabeto, signos de puntuación y números</option>
         </select>
 
-        <p><label id="mensaje"></label></p>
         <h5><label id="letra"><br/>· ·<br/>· ·<br/>· ·<br/></label></h5>
+
         <p><label id="veredicto"><em>Presiona 'Siguiente' para mostrar un signo braille</em></label></p>
-        <p><label for="respuesta">Tu respuesta:</label></p>
-        <p><input type="text" name="respuesta" id="respuesta"></p>
+        <p><input type="text" name="respuesta" id="respuesta" placeholder="Respuesta:"></p>
         
         <p><input id="evaluar" type="Submit" onclick="evaluar()" value="Evaluar"></p>
         <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
+        <p><label id="mensaje"></label></p>
 
         <hr>
         
