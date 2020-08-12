@@ -87,6 +87,7 @@ function siguiente() {
     document.getElementById("veredicto").innerHTML = "<em>¿Qué letra, número, o signo de puntuación es?</em>";
     document.getElementById("respuesta").value = "";
 }
+
 function evaluar() {
     //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.
     var inputRespuesta = document.getElementById("respuesta").value;
