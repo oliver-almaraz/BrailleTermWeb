@@ -2,6 +2,7 @@ body {
     font-family: 'Times New Roman', serif;
     text-align: center;
     color: #489aba;
+    background-color: #04050a; /*Se sobreescribirá con la imagen pero así no se mostrará en blanco al inicio*/
     background-image: url("background.png");
     background-repeat: repeat;
 }
