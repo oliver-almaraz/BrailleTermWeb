@@ -63,7 +63,7 @@ hr {
     box-shadow: 0px 0px 10px #6F05F0;
 }
 ::placeholder { /* Firefox, Chrome, Opera */
-    color: #489aba;
+    color: rgb(72, 154, 186);
     text-align: center;
 }
 ::-moz-placeholder {
