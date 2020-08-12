@@ -1,8 +1,9 @@
-html {
+body {
     font-family: 'Times New Roman', serif;
     text-align: center;
-    background-color: #04050a;
     color: #489aba;
+    background-image: url("background.png");
+    background-repeat: repeat;
 }
 h1 {
     color: #00CDFF;
@@ -13,6 +14,12 @@ h3 {
     font-size: 18px;
     font-weight: bold;
 }
+h5 {
+    font-family: Courier, "Calibri", monospace;
+    font-weight: bold;
+    font-size: 25px;
+    color: #00CDFF;
+}
 p {font-size: 16px}
 em {
     color: #00CDFF;
@@ -20,12 +27,6 @@ em {
     font-style: normal;
     font-size: 18px;
     text-shadow: 0.5px 0.5px 10px #018791;
-}
-h5 {
-    font-family: Courier, "Calibri", monospace;
-    font-weight: bold;
-    font-size: 25px;
-    color: #00CDFF;
 }
 a {
     color: #489aba;
@@ -38,15 +39,19 @@ select {
     font-size: 14px;
     color: #00CDFF;
     padding: 0.5em 1.2em;
-    width: 315px;
+    width: 270px;
 }
 input {
     background-color: #04050a;
     border-color: #00CDFF;
     color: #00CDFF;
+    text-align: center;
     padding: 0.5em 1.2em;
     border-radius: 4px;
     font-size: 14px;
+}
+#respuesta {
+    width: 100px;
 }
 input:hover,
 select:hover {
@@ -57,3 +62,9 @@ hr {
     border-color: #B882F9;
     box-shadow: 0px 0px 10px #6F05F0;
 }
+::placeholder, /* Firefox, Chrome, Opera */
+:-ms-input-placeholder, /* Internet Explorer 10-11 */
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #489aba;
+    text-align: center;
+ }
