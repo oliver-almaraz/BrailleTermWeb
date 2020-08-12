@@ -22,7 +22,9 @@ em {
 }
 h5 {
     font-family: Courier, "Calibri", monospace;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #00CDFF;
 }
 a {
     color: #489aba;
@@ -32,24 +34,25 @@ select {
     background-color: #04050a;
     border-color: #00CDFF;
     border-radius: 4px;
-    padding: 6px 14px;
     font-size: 14px;
     color: #00CDFF;
-}
-div:hover,
-div:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.1em);
+    padding: 0.5em 1.2em;
+    width: 315px;
 }
 input {
     background-color: #04050a;
     border-color: #00CDFF;
     color: #00CDFF;
-    padding: 6px 18px;
+    padding: 0.5em 1.2em;
     border-radius: 4px;
     font-size: 14px;
 }
+input:hover,
+select:hover {
+    box-shadow: 0 4px 16px ;
+    transition: all 0.2s ease #018791;
+  }
 hr {
-    background-color: #6F05F0;
-    box-shadow: 0.5px 0.5px 5px #6F05F0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px #6F05F0;
 }

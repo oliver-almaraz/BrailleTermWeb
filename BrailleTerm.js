@@ -102,3 +102,11 @@ function evaluar() {
         document.getElementById("veredicto").innerHTML = `<em>Respuesta incorrecta, la respuesta era ' ${respuesta[0]} '.</em>`;
     }
 }
+
+// Al presionar enter después de escribir en la casilla de input se activa el botón 'Evaluar'.
+var inputField = document.getElementById("respuesta");
+inputField.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("evaluar").click();
+    }
+});
