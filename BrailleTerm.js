@@ -1,5 +1,5 @@
 var rango = [0,0]; //Rango para generar un número/letra aleatorios.
-var respuesta = [0]; //Lista para almacenar la última letra presentada.
+var respuesta = ["vacia"]; //Lista para almacenar la última letra presentada.
 
 const todasLasFilas = {
     //Primera fila (a-j // 1-10)
@@ -85,7 +85,7 @@ function siguiente() {
 function evaluar() {
     //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.    
     var inputRespuesta = document.getElementById("respuesta").value;
-    if (respuesta[0] == 0) {
+    if (respuesta[0] == "vacia") {
         document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
     }
     else if (inputRespuesta == respuesta[0] || inputRespuesta.toLowerCase() == respuesta[0]) {
