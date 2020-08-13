@@ -34,4 +34,4 @@ Para ello, [descarga el código fuente](https://github.com/oliver-almaraz/Braill
 
 ### Captura de pantalla:
 
-<img src="https://user-images.githubusercontent.com/69062188/89935658-221d8400-dbd8-11ea-96f3-2e8e44f08977.jpg" width="50%"></img>
+<img src="https://user-images.githubusercontent.com/69062188/90096828-188c3d00-dcfa-11ea-992b-1c75dc7045cd.png" width="90%"></img> 
