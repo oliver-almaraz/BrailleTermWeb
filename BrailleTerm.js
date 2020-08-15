@@ -1,5 +1,5 @@
 var rango = [0,0]; //Rango para generar un número/letra aleatorios.
-var respuesta = ["vacia"]; //Lista para almacenar la última letra presentada.
+var respuesta = "vacia"; //Lista para almacenar la última letra presentada.
 
 const todasLasFilas = {
     //Primera fila (a-j // 1-10)
@@ -24,11 +24,11 @@ function generarNumAleatorio(r1,r2) {
 function generarLetra() {
     //Genera una letra al azar en el rango especificado.
     var num = generarNumAleatorio(rango[0],rango[1]);
-    while (todasLasFilas[num][0] == respuesta) {
+    while (todasLasFilas[num][0] === respuesta) {
         //Este bucle evitará presentar la misma letra dos veces seguidas.
         num = generarNumAleatorio(rango[0],rango[1]);
     }
-    respuesta[0] = todasLasFilas[num][0]; //En 'respuesta' se almacena el valor que corresponde a la letra.
+    respuesta = todasLasFilas[num][0]; //En 'respuesta' se almacena el valor que corresponde a la letra.
     document.getElementById("letra").innerHTML = todasLasFilas[num][1]; // y en la Label se muestra el valor que corresponde al signo braille.
 }
 
@@ -36,43 +36,43 @@ function siguiente() {
     //Actualiza el rango según la opción seleccionada y genera una (nueva) letra
     var dropd_opciones = document.getElementById("opcion");
     var seleccion = dropd_opciones.options[dropd_opciones.selectedIndex].value;
-    if (seleccion == "1a") {
+    if (seleccion === "1a") {
         rango[0] = 1;
         rango[1] = 10;
-    } else if (seleccion == "2a") {
+    } else if (seleccion === "2a") {
         rango[0] = 11;
         rango[1] = 20;
-    } else if (seleccion == "3a") {
+    } else if (seleccion === "3a") {
         rango[0] = 21;
         rango[1] = 26;
-    } else if (seleccion == "diacriticos") {
+    } else if (seleccion === "diacriticos") {
         rango[0] = 27;
         rango[1] = 33;
-    } else if (seleccion == "puntuacion") {
+    } else if (seleccion === "puntuacion") {
         rango[0] = 34;
         rango[1] = 43;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
-    } else if (seleccion == "numeros") {
+    } else if (seleccion === "numeros") {
         rango[0] = 44;
         rango[1] = 53;
-    } else if (seleccion == "1-2") {
+    } else if (seleccion === "1-2") {
         rango[0] = 1;
         rango[1] = 20;
-    } else if (seleccion == "1-3") {
+    } else if (seleccion === "1-3") {
         rango[0] = 1;
         rango[1] = 26;
-    } else if (seleccion == "1-4") {
+    } else if (seleccion === "1-4") {
         rango[0] = 1;
         rango[1] = 33;
-    } else if (seleccion == "1-5") {
+    } else if (seleccion === "1-5") {
         rango[0] = 1;
         rango[1] = 43;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
-    } else if (seleccion == "1-6") {
+    } else if (seleccion === "1-6") {
         rango[0] = 1;
         rango[1] = 53;
         document.getElementById("mensaje").innerHTML = "Para '¿?' y '¡!', escribe solo el signo que cierra.<br/>Es decir: solo '!' y '?'.";
-    } else if (seleccion == "none selected") {
+    } else if (seleccion === "none selected") {
         rango[0] = 0;
         rango[1] = 0;
         document.getElementById("mensaje").innerHTML = "Por favor elige una o varias filas para repasar.";
@@ -85,20 +85,20 @@ function siguiente() {
 function evaluar() {
     //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.    
     var inputRespuesta = document.getElementById("respuesta").value;
-    if (respuesta[0] == "vacia") {
+    if (respuesta === "vacia") {
         document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
     }
-    else if (inputRespuesta == respuesta[0] || inputRespuesta.toLowerCase() == respuesta[0]) {
+    else if (inputRespuesta == respuesta || inputRespuesta.toLowerCase() == respuesta) {
         document.getElementById("veredicto").innerHTML = "<em>¡Correcto! ¿Y ahora?</em>";
         generarLetra();
         document.getElementById("respuesta").value = "";
     } 
     else {
-        document.getElementById("veredicto").innerHTML = `<em>Incorrecto, la respuesta era ' ${respuesta[0]} '.</em>`;
+        document.getElementById("veredicto").innerHTML = `<em>Incorrecto, la respuesta era ' ${respuesta} '.</em>`;
     }
         
     var mensaje = document.getElementById("mensaje").innerHTML;
-    if ( mensaje == "Por favor elige una o varias filas para repasar.") {
+    if ( mensaje === "Por favor elige una o varias filas para repasar.") {
         document.getElementById("mensaje").innerHTML = " ";
     }
 }
