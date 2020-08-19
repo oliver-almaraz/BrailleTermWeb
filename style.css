@@ -54,14 +54,6 @@ h3 {
     font-size: 18px;
     font-weight: bold;
 }
-#imagen {
-    background-color: white;
-    display: block;
-    width: 250px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-}
 p {font-size: 16px}
 em {
     color: #00CDFF;
@@ -69,12 +61,6 @@ em {
     font-style: normal;
     font-size: 18px;
     text-shadow: 0.5px 0.5px 10px #018791;
-}
-#letra {
-    font-family: Courier, "Calibri", monospace;
-    font-weight: bold;
-    font-size: 25px;
-    color: #00CDFF;
 }
 strong {
     color: #ff6b6b;
@@ -87,6 +73,16 @@ a {
     color: #489aba;
     font-size: 14px;
 }
+hr {
+    border-color: #B882F9;
+    box-shadow: 0px 0px 10px #6F05F0;
+}
+
+/*******************
+En texto: elegir qué
+letras repasar
+********************/
+
 select {
     background-color: #04050a;
     border-color: #00CDFF;
@@ -96,9 +92,30 @@ select {
     padding: 0.5em 1.2em;
     width: 270px;
 }
-.botonInputBraille {
-    height: 100px;
-    width: 70px;
+
+/*********************
+Letra braille dibujada
+con puntos y O (texto)
+**********************/
+
+#letra {
+    font-family: Courier, "Calibri", monospace;
+    font-weight: bold;
+    font-size: 25px;
+    color: #00CDFF;
+}
+
+/****************
+Nota musical .svg
+*****************/
+
+#imagen {
+    background-color: white;
+    display: block;
+    width: 250px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /**********************
@@ -106,6 +123,7 @@ Input cajetines braille
 **********************/
 
 table {
+    width: 300px;
     border-spacing: 3px;
     text-align: center;
     margin-left: auto;
@@ -132,10 +150,6 @@ input:hover,
 select:hover,
 .dropbtn:hover {
     box-shadow: 0 4px 16px #018791;
-}
-hr {
-    border-color: #B882F9;
-    box-shadow: 0px 0px 10px #6F05F0;
 }
 
 /****************
