@@ -73,10 +73,14 @@ strong {
 a {
     color: #489aba;
     font-size: 14px;
+    text-decoration: none;
 }
 hr {
     border-color: #B882F9;
     box-shadow: 0px 0px 10px #6F05F0;
+}
+#pie {
+    font-size: 12px;
 }
 
 /*******************
