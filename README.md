@@ -4,6 +4,9 @@ Esta es la **versión web** de [BrailleTerm](https://github.com/oliver-almaraz/B
 Este programa es parte de un proyecto sin fines de lucro, se trata en general de un curso gratuito para
 aprender signografía básica del braille en español destinado a usuarios videntes.
 
+### ¡Nuevo apartado de musicografía braille!
+Después de varios días de trabajo hoy se estrena por fin la nueva sección de **musicografía** con dos opciones: estudiar **las notas, silencios y duración**
+para después ir por las **alteraciones y registros (octavas)**. ¡Nuevas funcionalidades vienen en camino!
 
 ## [Acceder a la aplicación web](https://oliver-almaraz.github.io/BrailleTermWeb/) 
 
