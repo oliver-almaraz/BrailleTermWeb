@@ -24,7 +24,16 @@
     </head>
 
     <body>
-        <h1><strong>BrailleTerm</strong></h1>
+        <!--PANEL NAVEGACIÓN SUPERIOR-->
+        <ul>
+            <li><a class="active">Texto</a></li>
+            <li><a href="/Musicografía/Notas_silencios_duración/index.html">Musicografía</a></li>
+            <li id="about"><a href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a></li>
+        </ul> 
+
+
+
+        <h1>BrailleTerm</h1>
         <h3>Un juego que facilita a usuarios videntes repasar signografía básica braille del español.</h3>
         
         <hr>
@@ -48,7 +57,7 @@
             <option value="1-6">Estudiar alfabeto, signos de puntuación y números</option>
         </select>
 
-        <h5><label id="letra"><br/>· ·<br/>· ·<br/>· ·<br/></label></h5>
+        <p><label id="letra"><br/>· ·<br/>· ·<br/>· ·<br/></label></p>
 
         <p><label id="veredicto"><em>Presiona 'Siguiente' para mostrar un signo braille</em></label></p>
         <p><input type="text" id="respuesta" placeholder="Respuesta:"></p>
@@ -59,14 +68,14 @@
 
         <hr>
         
+        <p><label><em>Recursos:</em></label></p>
         <p><a href="https://raw.githubusercontent.com/oliver-almaraz/BrailleTermGUI/master/Alfabeto%20braille%20espa%C3%B1ol.pdf" title="Tabla de signografía básica braille (español) en PDF" target="_blank">Ver tabla de signografía braille (PDF)</a></p>
         <p><a href="https://github.com/oliver-almaraz/BrailleTermWeb/raw/master/C%C3%B3mo_jugar.pdf" title="Cómo jugar" target="_blank">Cómo jugar (introducción al braille)</a></p>
-        <p><a href="https://github.com/oliver-almaraz/BrailleTermWeb" title="Repositorio en GitHub de la aplicación web" target="_blank">Más información acerca de este juego</a></p>
         <p><a href="https://github.com/oliver-almaraz/BrailleTermGUI" title="Repositorio en GitHub de la aplicación para escritorio" target="_blank">Aplicación para Windows, Linux y MacOS</a></p>
         <p><a href="mailto:oliver.almaraz@gmail.com" title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
 
 <!-- Código JavaScript al final para no retrasar el render de la página -->
-        <script src="BrailleTerm.js"></script>
+        <script src="script.js"></script>
 
     </body>
 </html>

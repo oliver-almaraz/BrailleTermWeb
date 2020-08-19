@@ -89,12 +89,12 @@ function evaluar() {
         document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
     }
     else if (inputRespuesta == respuesta || inputRespuesta.toLowerCase() == respuesta) {
-        document.getElementById("veredicto").innerHTML = "<em>¡Correcto! ¿Y ahora?</em>";
+        document.getElementById("veredicto").innerHTML = "<em>¡Correcto!</em> ¿Y ahora?";
         generarLetra();
         document.getElementById("respuesta").value = "";
     } 
     else {
-        document.getElementById("veredicto").innerHTML = `<em>Incorrecto, la respuesta era ' ${respuesta} '.</em>`;
+        document.getElementById("veredicto").innerHTML = `<strong>Incorrecto</strong>, la respuesta era '<em> ${respuesta} </em>'`;
     }
         
     var mensaje = document.getElementById("mensaje").innerHTML;

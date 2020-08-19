@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <title>BrailleTerm Musicografía</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <meta property="og:title" content="BrailleTerm Musicografía">
+        <meta property="og:image" content="https://github.com/oliver-almaraz/BrailleTermWeb/raw/master/PagePreview.png">
+        <meta property="og:description" content="Un juego que facilita a usuarios videntes repasar signografía básica braille del español.">
+        <meta property="og:url" content="https://oliver-almaraz.github.io/BrailleTermWeb/">
+        
+        <link rel="icon" href="../../icono.png" type="image/icon type">
+        <link href="../../style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <!--PANEL NAVEGACIÓN SUPERIOR-->
+        <ul>
+            <li><a href="../../index.html">Texto</a></li>
+            <li><a class="active">Musicografía</a></li>
+            <li id="about"><a href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a></li>
+        </ul> 
+
+
+        <h1>BrailleTerm</h1>
+        <h3>Repasa la signografía elemental de la musicografía braille.</h3>
+        
+        <hr>
+
+        <p><label><em>Elige qué elementos repasar:</em></label></p>
+
+        <!--MENÚ OPCIONES-->
+        <div class="dropdown">
+            <button onclick="hover" class="dropbtn">Notas, silencios y duración</button>
+            <div class="dropdown-content">
+                <a href="../Alteracion_Registro_Nota/index.html">Alteraciones, registro y notas</a>
+            </div>
+        </div>
+
+        <br/>
+
+        <h5><img id="imagen"></h5>
+
+        <p><label id="veredicto"></label></p>
+        
+        <table id="cajetinesInput" style="width:300px">
+            <body>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(1)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(4)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(2)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(5)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(3)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(6)">
+                    </td>
+                </tr>
+            </body>
+        </table>
+
+        <p><input id="evaluar" type="Submit" onclick="evaluar()" value="Evaluar"></p>
+        <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
+        <p><label id="mensaje"></label></p>
+
+        <hr>
+
+        <p><label><em>Recursos:</em></label></p>
+        <p><a href="https://www.once.es/servicios-sociales/braille/documentos-tecnicos/documentos-tecnicos-relacionados-con-el-braille/documentos/B4-3.-LA-MUSICOGRAFIA-BRAILLE-V1.pdf/download" title="Descarga el manual introductorio a la musicografía de la Organización Nacional de Ciegos Españoles" target="_blank">Manual introductorio a la musicografía braille (ONCE)</a></p>
+        <p><a href="mailto:oliver.almaraz@gmail.com" title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
+        
+<!-- Código JavaScript al final para no retrasar el render de la página -->
+        <script src="script.js"></script>
+
+    </body>
+</html>
