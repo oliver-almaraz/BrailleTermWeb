@@ -46,12 +46,12 @@ const respuestas = {
     37 : [1,0,1,0,0,1], //S. de blanca
     38 : [1,1,1,0,0,1], //S. de negra
     39 : [1,0,1,1,0,1], //S. de corchea
-    40 : [1,0,1,1,0,0] //S. de semicorchea (igual que el de redonda)
+    40 : [1,0,1,1,0,0]  //S. de semicorchea (igual que el de redonda)
 }
 
 function NumAleatorio() {
-    //Retorna un número entero aleatorio entre 1 y 41
-    return Math.floor(Math.random() * (42 - 1) ) + 1;
+    //Retorna un número entero aleatorio entre 1 y 40
+    return Math.floor(Math.random() * (41 - 1) ) + 1;
 }
 function evaluar() {
     if(JSON.stringify(respuestas[numeroAnterior])===JSON.stringify(cajetines)) {

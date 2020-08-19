@@ -1,4 +1,7 @@
-/* Panel navegación superior */
+/************************
+Panel navegación superior
+*************************/
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -30,6 +33,10 @@ li a:hover {
     text-shadow: 0.5px 0.5px 10px #018791;
 }
 
+/******************
+Cuerpo del documento
+*******************/
+
 body {
     font-family: 'Times New Roman', serif;
     text-align: center;
@@ -55,7 +62,6 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
-
 p {font-size: 16px}
 em {
     color: #00CDFF;
@@ -94,6 +100,11 @@ select {
     height: 100px;
     width: 70px;
 }
+
+/**********************
+Input cajetines braille
+**********************/
+
 table {
     border-spacing: 3px;
     text-align: center;
@@ -101,6 +112,11 @@ table {
     margin-right: auto;
     table-layout: fixed ;
 }
+
+/******
+Botones
+*******/
+
 input, .dropbtn {
     background-color: #04050a;
     border-color: #00CDFF;
@@ -121,6 +137,59 @@ hr {
     border-color: #B882F9;
     box-shadow: 0px 0px 10px #6F05F0;
 }
+
+/****************
+Botón de cascada:
+Selecciona qué estudiar en apartado de MUSICOGRAFÍA
+*****************
+
+The container <div> - needed to position the dropdown content */
+.dropbtn {
+    width: 300px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    width: 300px;
+    box-shadow: 0 4px 16px;
+    border-radius: 4px;
+    z-index: 1;
+    position: absolute;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    background-color: #000000ea;
+    color: #489aba;
+    text-decoration: none;
+    text-shadow: 0.5px 0.5px 10px #018791;
+    padding: 10px 16px;
+    border-radius: 4px;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #00CDFF;
+    text-shadow: 0.5px 0.5px 10px #018791;
+    font-size: 16px;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown 
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}   */
+
+/************************************************
+Para que el texto por defecto del text input
+tenga el formato de la página y no del navegador
+************************************************/
+
 ::placeholder { /* Firefox, Chrome, Opera */
     color: rgb(72, 154, 186);
     text-align: center;
@@ -138,53 +207,3 @@ hr {
     color: #489aba;
     text-align: center;
 }
-
-
-
-/* MENÚ OPCIONES
-The container <div> - needed to position the dropdown content */
-.dropbtn {
-    width: 300px;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    width: 300px;
-    box-shadow: 0 4px 16px;
-    border-radius: 4px;
-    z-index: 1;
-    position: absolute;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    background-color: #000000ea;
-    color: #489aba;
-    text-decoration: none;
-    text-shadow: 0.5px 0.5px 10px #018791;
-    padding: 10px 16px;
-    border-radius: 4px;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    color: #00CDFF;
-    text-shadow: 0.5px 0.5px 10px #018791;
-    font-size: 16px;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown 
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}   */
