@@ -8,6 +8,7 @@ ul {
     max-width: 700px;
     margin: auto;
     background-color: #4e4e4e7e;
+    background-image: url("background2.png");
     overflow: hidden;
 }
 li {
