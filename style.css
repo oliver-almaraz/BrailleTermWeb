@@ -135,6 +135,9 @@ table {
     margin-right: auto;
     table-layout: fixed ;
 }
+.acordes {
+    width: 170px;
+}
 
 /******
 Botones

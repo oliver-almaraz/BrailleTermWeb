@@ -41,11 +41,10 @@
 
         <!--MENÚ OPCIONES-->
         <div class="dropdown">
-            <button onclick="hover" class="dropbtn">Alteraciones, registro y notas</button>
+            <button onclick="hover" class="dropbtn">Acordes</button>
             <div class="dropdown-content">
                 <a href="../Notas_silencios_duracion/Notas_silencios_duracion.html">Notas, silencios y duración</a>
-                <a href="../Acordes/Acordes.html">Acordes</a>
-
+                <a href="../Alteracion_Registro_Nota/Alteracion_Registro_Nota.html">Alteraciones, registro y notas</a>
             </div>
         </div>
 
@@ -53,19 +52,12 @@
 
         <h5><img id="imagen"></h5>
 
-        <p><label id="veredictoAlteracion"></label></p>
-        <p><label id="veredictoOctava"></label></p>
-        <p><label id="veredictoNota"></label></p>
+        <p><label id="veredictoDerecha"></label></p>
+        <p><label id="veredictoIzquierda"></label></p>
         
-        <table id="cajetinesInput">
-            <head>
-                <tr>
-                    <th><em>Alteración:</em></th>
-                    <th><em>Octava:</em></th>
-                    <th><em>Nota:</em></th>
-                </tr>
-            </head>
+        <table id="cajetinesInput" class="acordes">
             <body>
+                <tr><td colspan="2"><em>Mano derecha:</em></td></tr>
                 <tr>
                     <td>
                         <input type="checkbox" onclick="cb(1,1)">
@@ -76,11 +68,6 @@
                         <input type="checkbox" onclick="cb(2,1)">
                         <!--Caracter-->⠀<!--Unicode vacío-->
                         <input type="checkbox" onclick="cb(2,4)">
-                    </td>
-                    <td>
-                        <input type="checkbox" onclick="cb(3,1)">
-                        <!--Caracter-->⠀<!--Unicode vacío-->
-                        <input type="checkbox" onclick="cb(3,4)">
                     </td>
                 </tr>
                 <tr>
@@ -94,11 +81,6 @@
                         <!--Caracter-->⠀<!--Unicode vacío-->
                         <input type="checkbox" onclick="cb(2,5)">
                     </td>
-                    <td>
-                        <input type="checkbox" onclick="cb(3,2)">
-                        <!--Caracter-->⠀<!--Unicode vacío-->
-                        <input type="checkbox" onclick="cb(3,5)">
-                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -111,10 +93,45 @@
                         <!--Caracter-->⠀<!--Unicode vacío-->
                         <input type="checkbox" onclick="cb(2,6)">
                     </td>
+                </tr>
+
+                <tr height = "15px"></tr>
+
+                <tr><td colspan="2"><em>Mano izquierda:</em></td></tr>
+                <tr>
                     <td>
-                        <input type="checkbox" disabled="true">
+                        <input type="checkbox" onclick="cb(3,1)">
                         <!--Caracter-->⠀<!--Unicode vacío-->
-                        <input type="checkbox" disabled="true">
+                        <input type="checkbox" onclick="cb(3,4)">
+                    </td>
+                    <td>
+                        <input type="checkbox" onclick="cb(4,1)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(4,4)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(3,2)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(3,5)">
+                    </td>
+                    <td>
+                        <input type="checkbox" onclick="cb(4,2)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(4,5)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(3,3)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(3,6)">
+                    </td>
+                    <td>
+                        <input type="checkbox" onclick="cb(4,3)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(4,6)">
                     </td>
                 </tr>
             </body>
