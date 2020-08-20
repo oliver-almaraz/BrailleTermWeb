@@ -107,9 +107,6 @@ function resetear() {
     for (var i=0; i<16; i++) {
         puntos[i].checked = false;
     }
-    puntos[16].checked = true;
-    puntos[17].checked = true;
-
     cajetines = {1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,1,0,0,1]};
 }
 function cb(cajetin, punto) {
