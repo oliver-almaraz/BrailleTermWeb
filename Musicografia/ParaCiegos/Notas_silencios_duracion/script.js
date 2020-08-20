@@ -59,7 +59,7 @@ function evaluar() {
         siguiente();
         alert(`¡La respuesta es correcta!\nAhora ¿cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n(Presiona "Enter", luego escribe el nuevo signo braille y al final presiona "Enter" otra vez para enviar tu respuesta)`);
     } else if (inputOrdenado.length === 1) { //Si el teclado convirtió el input a un solo signo unicode braille
-        alert('Por favor verifica que al escribir con tu teclado como Perkins se escriban las letras del teclado y no el signo braille. Es decir, al escribir el signo para "Do redonda" tu teclado debe escribir "fsjkl" y no "y".')
+        alert('Por favor verifica que al escribir con tu teclado como Perkins se escriban las letras del teclado y no el signo braille. Es decir, al escribir el signo para "Do redonda" tu teclado debe escribir "f,s,j,k,l" y no "y".')
     } else {
         alert(`La respuesta es incorrecta, prueba otra vez.\n¿Cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n(Presiona "Enter", luego escribe el nuevo signo braille y al final presiona "Enter" otra vez para enviar tu respuesta)`);
         resetear();
