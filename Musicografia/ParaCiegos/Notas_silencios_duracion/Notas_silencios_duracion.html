@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175298715-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-175298715-1');
+        </script>
+        
+        <title>BrailleTerm Musicografía</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <meta property="og:title" content="BrailleTerm Musicografía">
+        <meta property="og:image" content="https://github.com/oliver-almaraz/BrailleTermWeb/raw/master/PagePreview.png">
+        <meta property="og:description" content="Un juego que facilita a usuarios videntes repasar signografía básica braille del español.">
+        <meta property="og:url" content="https://oliver-almaraz.github.io/BrailleTermWeb/">
+        
+    </head>
+
+    <body>
+        <h1>BrailleTerm</h1>
+        <h3>Repasa la signografía elemental de la musicografía braille.</h3>
+        
+        <hr>
+
+        <p><label>Ahora estudiando: notas, silencios y duración</label></p>
+<!--
+        <p><label>¿Quieres estudiar otros elementos?</label></p>
+
+        <p><a href="../Alteracion_Registro_Nota/Alteracion_Registro_Nota.html">Estudiar alteraciones, registro y notas</a></p>
+        <p><a href="../Acordes/Acordes.html">Estudiar acordes</a></p>   -->
+
+        <hr>
+
+        <p><label>Instrucciones: escribe el signo braille para la nota con la duración que se te pide a continuación. Para ello, selecciona el recuadro vació para ingresar texto junto a "Tu respuesta:", y utiliza tu teclado QWERTY como teclado de Perkins. Para evaluar tu respuesta presiona la tecla "Enter".  Si tu respuesta es correcta, se generará una nueva nota automáticamente.</label></p>
+
+        <label for="respuesta" id="nota"></label>
+
+        <p><label for="respuesta">Tu respuesta:</label>
+        <input id="respuesta" type="text"></p>
+        <p><input id="evaluar" type="Submit" onclick="evaluar()" value="Evaluar"></p>
+        <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
+
+        <hr>
+
+        <p><label>Recursos:</label></p>
+        <p><a href="https://www.once.es/servicios-sociales/braille/documentos-tecnicos/documentos-tecnicos-relacionados-con-el-braille/documentos/B4.Musicografabraille.Bra/download" title="Descarga el manual introductorio a la musicografía de la Organización Nacional de Ciegos Españoles" target="_blank">Manual introductorio a la musicografía braille.Bra (ONCE)</a></p>
+        <p><a href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de esta aplicación</a></p>
+        <p><a href="mailto:oliver.almaraz@gmail.com" title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
+
+<!-- Código JavaScript al final para no retrasar el render de la página -->
+        <script src="script.js"></script>
+
+    </body>
+</html>
