@@ -20,7 +20,7 @@ const respuestas = {
     15 : {1:'Do negra', 2:'fljk'},
     16 : {1:'Re negra', 2:'fkl'},
     17 : {1:'Mi negra', 2:'dslj'},
-    18 : {1:'Fa negra', 2:'dsljk'},
+    18 : {1:'Fa negra', 2:'fdjkl'},
     19 : {1:'Sol negra', 2:'dskl'},
     20 : {1:'La negra', 2:'djl'},
     21 : {1:'Si negra', 2:'dlkj'},
