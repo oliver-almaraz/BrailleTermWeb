@@ -25,11 +25,17 @@
 
     <body>
         <!--PANEL NAVEGACIÓN SUPERIOR-->
-        <ul>
-            <li><a href="../../index.html">Texto</a></li>
-            <li><a class="active">Musicografía</a></li>
-            <li id="about"><a href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a></li>
-        </ul> 
+        <div class="navbar">
+            <a href="./../../index.html">Texto</a>
+            <div class="dropdownNav">
+                <button class="dropbtnNav">Musicografía</button>
+                <div class="dropdownNav-content">
+                <a href="./../ParaCiegos/Notas_silencios_duracion/Notas_silencios_duracion.html">Para ciegos</a>
+                <a class="active">Para videntes</a>
+                </div>  
+            </div>
+            <a id="about" href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a>
+        </div>
 
 
         <h1>BrailleTerm</h1>
