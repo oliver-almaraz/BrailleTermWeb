@@ -38,10 +38,11 @@ Panel navegación superior
     margin: 0; /* Important for vertical align on mobile phones */
 }
 /* Add a background color to navbar links on hover */
-.navbar a:hover, .dropdownNav:hover .dropbtnNav {
+.navbar a:hover,.dropdownNav:hover .dropbtnNav {
     color: #00ccff;
     text-shadow: 0.5px 0.5px 10px #018791;
     background-color: #080808bd;
+    box-shadow: 0 4px 16px #018791;
 }
 /* Dropdown content (hidden by default) */
 .dropdownNav-content {
@@ -65,12 +66,11 @@ text-align: left;
 /* Show the dropdown menu on hover */
 .dropdownNav:hover .dropdownNav-content {
     display: block;
-
 }
 .active {
     background-color: #08080881;
     text-shadow: 0.5px 0.5px 10px #018791;
-    }
+}
 
 
 /******************
