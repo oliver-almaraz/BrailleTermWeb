@@ -1,7 +1,7 @@
 var numeroAnterior = 0; //Valor numérico de la nota actual
 var contador = 0; //Solo muestra las instrucciones la primera vez.
 
-// Notas (los puntos 3 y 6 siempre seleccionados porque se refieren a la duración)
+// Notas (en corcheas)
 const c = "fjk";
 const d = "fk";
 const e = "dfj";
