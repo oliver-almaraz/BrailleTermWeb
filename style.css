@@ -37,10 +37,20 @@ Panel navegación superior
     font-family: inherit;
     margin: 0; /* Important for vertical align on mobile phones */
 }
+.dropdownNav .dropbtnNavWhenActive {
+    font-size: 16px;
+    color: #B882F9;
+    text-shadow: 0.5px 0.5px 15px #6F05F0;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0; /* Important for vertical align on mobile phones */
+}
 /* Add a background color to navbar links on hover */
-.navbar a:hover,.dropdownNav:hover .dropbtnNav {
-    color: #00ccff;
-    text-shadow: 0.5px 0.5px 10px #018791;
+.navbar a:hover,.dropdownNav:hover .dropbtnNav,
+.dropdownNav:hover .dropbtnNavWhenActive {
     background-color: #080808bd;
     box-shadow: 0 4px 16px #018791;
 }
@@ -67,9 +77,10 @@ text-align: left;
 .dropdownNav:hover .dropdownNav-content {
     display: block;
 }
-.active {
+.navbar .active {
+    color: #B882F9;
+    text-shadow: 0.5px 0.5px 15px #6F05F0;
     background-color: #08080881;
-    text-shadow: 0.5px 0.5px 10px #018791;
 }
 
 
