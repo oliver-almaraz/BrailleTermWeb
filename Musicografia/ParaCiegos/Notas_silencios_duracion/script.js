@@ -1,4 +1,5 @@
 var numeroAnterior = 0; //Valor numérico de la nota actual
+var contador = 0; //Solo muestra las instrucciones la primera vez.
 
 const respuestas = {
     1 : {1:'Do redonda', 2:'sfjkl'},
@@ -55,13 +56,23 @@ function evaluar() {
     var respuestaOrdenada = respuestas[numeroAnterior][2].split('').sort().join('');
     var inputOrdenado = document.getElementById("respuesta").value.split('').sort().join('');
 
-    if(respuestaOrdenada === inputOrdenado) {
+    if(respuestaOrdenada === inputOrdenado) { //Respuesta correcta
         siguiente();
-        alert(`¡La respuesta es correcta!\nAhora ¿cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n(Presiona "Enter", luego escribe el nuevo signo braille y al final presiona "Enter" otra vez para enviar tu respuesta)`);
+        if (contador === 0) { //Solo muestra las instrucciones la primera vez.
+            alert(`¡Correcto!\nAhora ¿cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n(Presiona "Enter" para continuar y escribe tu respuesta, luego presiona otra vez "Enter" para enviar tu respuesta)`);
+            contador++;
+        } else if (contador >= 1) {
+            alert(`¡Correcto!\nAhora ¿cuál es el signo braille para ${respuestas[numeroAnterior][1]}?`)
+        }
     } else if (inputOrdenado.length === 1) { //Si el teclado convirtió el input a un solo signo unicode braille
-        alert('Por favor verifica que al escribir con tu teclado como Perkins se escriban las letras del teclado y no el signo braille. Es decir, al escribir el signo para "Do redonda" tu teclado debe escribir "f,s,j,k,l" y no "y".')
-    } else {
-        alert(`La respuesta es incorrecta, prueba otra vez.\n¿Cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n(Presiona "Enter", luego escribe el nuevo signo braille y al final presiona "Enter" otra vez para enviar tu respuesta)`);
+        alert('Por favor verifica que al escribir con tu teclado como Perkins se escriban las letras del teclado y no el signo braille. Es decir, al escribir el signo para "Do redonda" tu teclado debe escribir "f,s,j,k,l" y no "y".');
+    } else { //respuesta incorrecta
+        if (contador === 0) {
+            alert(`La respuesta es incorrecta, prueba otra vez.\n¿Cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n(Presiona "Enter" para continuar y escribe tu respuesta, luego presiona otra vez "Enter" para enviar tu respuesta)`);
+            contador++
+        } else if (contador >=1) {
+        alert(`La respuesta es incorrecta, prueba otra vez.\n¿Cuál es el signo braille para ${respuestas[numeroAnterior][1]}?\n`);
+        }
         resetear();
     }
 }
