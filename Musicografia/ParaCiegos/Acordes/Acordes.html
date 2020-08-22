@@ -10,15 +10,16 @@
             gtag('config', 'UA-175298715-1');
         </script>
         <style> /* Colores de alto contraste para personas con baja visibilidad*/
-            body,input,a {
+            body,input,a,button {
                 color:#00CDFF;
                 background-color: black;
             }
+            button,input { height: 40px;}
         </style>
         
         <title>BrailleTerm Musicografía</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta property="og:title" content="BrailleTerm Musicografía">
         <meta property="og:image" content="../PagePreviewMusic.png">
@@ -33,33 +34,40 @@
         
         <hr>
 
-        <h2><label>Ahora estudiando: alteraciones, registros (octavas) y notas</label></h2>
+        <h2><label>Ahora estudiando: acordes</label></h2>
 
         <h3>¿Quieres estudiar otros elementos?</h3>
 
         <p><a href="../Notas_silencios_duracion/Notas_silencios_duracion.html">Estudiar notas, silencios y duración</a></p>
-        <!--<p><a href="">Estudiar acordes</a></p>-->
+        <p><a href="../Alteracion_Registro_Nota/Alteracion_Registro_Nota.html">Estudiar alteraciones, registro y notas</a></p>
+
 
         <hr>
         <h3>Instrucciones:</h3>
-        <p><label>Escribe los signos braille que corresponden a la nota que se te pide a continuacióna en el siguiente orden, 
-            dejando un espacio entre cada signo braille.
+        <p><label>Escribe los signos braille que corresponden al acorde que se te describe a continuación.<br/>
+            Recuerda que:
         </label></p>
         <ol>
-            <li>Primero la alteración (si tiene).</li>
-            <li>Luego el registro (octava), tomando el registro central como el 5 (Fa central, en primer espacio de clave de Sol = Fa 5).</li>
-            <li>Y al final la nota (Do, Re, etc.) siempre con valor de corchea.</li>
+            <li>Para la mano derecha los intervalos se anotan de arriba abajo siempre con respecto a la nota más aguda.</li>
+            <li>Para la izquierda es al revés: la nota de referencia es la más grave y los intervalos se anotan de abajo arriba.</li>
+            <li>Primero escribe la nota de referencia, es decir, la más aguda para la mano derecha o la más grave para la izquierda, 
+                con su respectivo registro (octava) y en figura de redonda (cuatro tiempos).</li>
+            <li>Cuando termines anotando los intervalos de la mano derecha, deja un espacio y anota los de la izquierda.</li>
         </ol>
-        <p><label>Utiliza tu teclado QWERTY como teclado de Perkins ("f" para el punto "1", "j" para el "4", etc).<br/>
+        <p><label>Presiona la tecla "a" para escuchar el acorde a transcribir cuantas veces quieras.<br/> 
+            Utiliza tu teclado QWERTY como teclado de Perkins para escribir tu respuesta ("f" para el punto "1", "j" para el "4", etc).<br/>
             Para evaluar tu respuesta presiona la tecla "Enter".<br/></label></p>
 
-
-        <h3><label for="respuesta" id="nota"></label></h3>
+            
+        <p>Presiona el siguiente botón o la tecla "a" para reproducir el audio del acorde a transcribir:</p>
+        <button onclick="play()" type="button">Escuchar acorde</button>
 
         <p><label for="respuesta">Tu respuesta:</label>
-        <input id="respuesta" type="text" autofocus></p>
+        <input id="respuesta" type="text" onblur="this.focus()" autofocus></p>
         <p><input id="evaluar" type="Submit" onclick="evaluar()" value="Evaluar"></p>
         <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
+
+        <audio id="audio" type="audio/mpeg" preload="auto" controls></audio>
 
         <hr>
 
