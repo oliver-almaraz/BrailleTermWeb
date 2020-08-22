@@ -73,8 +73,7 @@ function resetear() {
     for (var i=0; i<(puntos.length); i++) {
         puntos[i].checked = false;
     }
-    cajetinesDerecha = {1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0]};
-    cajetinesIzquierda = {1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0]};
+    cajetines = {1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,0,0,0,0], 4:[0,0,0,0,0,0]};
 }
 function cb(cajetin, punto) {
     //Cada acción de un checkbox modifica la lista "cajetines"
@@ -85,7 +84,7 @@ function cb(cajetin, punto) {
     }
 }
 function siguiente() {
-    var num = NumAleatorio();
+    let num = NumAleatorio();
     while (num === numeroAnterior) {
         //Este bucle evitará presentar la misma letra dos veces seguidas.
         num = NumAleatorio()
