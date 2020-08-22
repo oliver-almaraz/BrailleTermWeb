@@ -65,8 +65,7 @@ function NumAleatorio() {
 }
 function evaluar() {
     var respuestaOrdenada = respuestas[numeroAnterior].split('').sort().join('');
-    var inputOrdenado = document.getElementById("respuesta"
-        ).value.replace(/a/g, '').split('').sort().join(''); //Elimina "a" que se ocupa para reproducir audio
+    var inputOrdenado = document.getElementById("respuesta").value.split('').sort().join('');
 
     if(respuestaOrdenada === inputOrdenado) { //Respuesta correcta
         siguiente();
@@ -108,6 +107,10 @@ document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         document.getElementById("evaluar").click();
     } else if (event.keyCode === 65) {
+        // Se eliminan las "a" de la casilla de input.
+        var respuestaInput= document.getElementById("respuesta").value;
+        document.getElementById("respuesta").value = respuestaInput.replace(/a/g, '');
+        // Y luego se reproduce el audio
         document.getElementById("audio").play();
     }
 });
