@@ -106,7 +106,7 @@ siguiente()
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         document.getElementById("evaluar").click();
-    } else if (event.keyCode === 65 || event.keyCode === 229 ) {
+    } else if (event.keyCode === 65) {
         // Se eliminan las "a" de la casilla de input.
         var respuestaInput= document.getElementById("respuesta").value;
         document.getElementById("respuesta").value = respuestaInput.replace(/a/gi, '');
