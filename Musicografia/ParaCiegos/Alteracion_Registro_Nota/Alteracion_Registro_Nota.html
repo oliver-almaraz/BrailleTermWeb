@@ -52,7 +52,9 @@
             <li>Y al final la nota (Do, Re, etc.) siempre con valor de corchea.</li>
         </ol>
         <p><label>Utiliza tu teclado QWERTY como teclado de Perkins ("f" para el punto "1", "j" para el "4", etc).<br/>
-            Para evaluar tu respuesta presiona la tecla "Enter".<br/></label></p>
+            Para evaluar tu respuesta presiona la tecla "Enter".<br/>
+            Si te das por vencido con una nota, presiona la tecla "ñ" (a la derecha de l) para presentarte una nueva.
+        </label></p>
 
 
         <h3><label for="respuesta" id="nota"></label></h3>
@@ -60,7 +62,7 @@
         <p><label for="respuesta">Tu respuesta:</label>
         <input id="respuesta" type="text" autofocus></p>
         <p><input id="evaluar" type="Submit" onclick="evaluar()" value="Evaluar"></p>
-        <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
+        <p><input id="siguiente" type="Submit" onclick="siguiente()" value="Siguiente"></p>
 
         <hr>
 

@@ -95,5 +95,8 @@ siguiente()
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         document.getElementById("evaluar").click();
+    }  else if (event.keyCode === 59) {
+        // La tecla "ñ" activa "siguiente"
+        document.getElementById("siguiente").click();
     }
 });

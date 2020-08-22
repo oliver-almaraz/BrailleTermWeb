@@ -112,6 +112,9 @@ document.addEventListener("keyup", function(event) {
         document.getElementById("respuesta").value = respuestaInput.replace(/a/g, '');
         // Y luego se reproduce el audio
         document.getElementById("audio").play();
+    } else if (event.keyCode === 59) {
+        // La tecla "ñ" activa "siguiente"
+        document.getElementById("siguiente").click();
     }
 });
 
