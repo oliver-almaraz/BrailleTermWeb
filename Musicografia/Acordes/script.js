@@ -30,7 +30,7 @@ const respuestas = {
     6 : {1:tercera, 2:cuarta, 3:tercera, 4:quinta},
     7 : {1:quinta, 2:octava, 3:segunda, 4:cuarta},
     8 : {1:sexta, 2:octava, 3:tercera, 4:cuarta},
-    9 : {1:tercera, 2:sexta, 3:segunda, 4:octava},
+    9 : {1:quinta, 2:octava, 3:segunda, 4:cuarta},
     10 : {1:septima, 2:octava, 3:tercera, 4:quinta},
     11 : {1:sexta, 2:septima, 3:tercera, 4:cuarta},
     12 : {1:sexta, 2:octava, 3:tercera, 4:quinta},
@@ -91,7 +91,7 @@ function siguiente() {
         num = NumAleatorio()
     }
     numeroAnterior = num;
-    document.getElementById("imagen").src = 'Notas/' + num + '.svg';
+    document.getElementById("imagen").src = './Notas/' + numeroAnterior + '.svg';
     resetear();
 
     document.getElementById("veredictoDerecha").innerHTML = "<em>¿Y ahora?</em>"
