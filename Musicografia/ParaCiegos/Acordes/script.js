@@ -106,14 +106,14 @@ siguiente()
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         document.getElementById("evaluar").click();
-    } else if (event.keyCode === 65) {
-        // Se eliminan las "a" de la casilla de input.
+    } else if (event.keyCode === 65 /*a*/ || event.keyCode === 190 /*.*/) {
+        // Se eliminan las "a" y "." de la casilla de input.
         var respuestaInput= document.getElementById("respuesta").value;
-        document.getElementById("respuesta").value = respuestaInput.replace(/a/gi, '');
+        document.getElementById("respuesta").value = respuestaInput.replace(/a|\./gi, '');
         // Y luego se reproduce el audio
         document.getElementById("audio").play();
-    } else if (event.keyCode === 59) {
-        // La tecla "ñ" activa "siguiente"
+    } else if (event.keyCode === 59 /*ñ*/ || event.keyCode === 188 /*,*/) {
+        // La tecla "ñ" o "," activa "siguiente"
         document.getElementById("siguiente").click();
     }
 });
