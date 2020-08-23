@@ -94,9 +94,9 @@ siguiente()
 // Al presionar enter después de escribir en la casilla de input se activa el botón 'Evaluar'.
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
-        document.getElementById("evaluar").click();
-    }  else if (event.keyCode === 59) {
-        // La tecla "ñ" activa "siguiente"
-        document.getElementById("siguiente").click();
+        evaluar();
+    } else if (event.keyCode === 59 /*ñ*/ || event.keyCode === 188 /*,*/) {
+        // La tecla "ñ" o "," activa "siguiente"
+        siguiente();
     }
 });
