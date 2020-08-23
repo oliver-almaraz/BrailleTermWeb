@@ -98,8 +98,17 @@ function siguiente() {
 }
 
 //Al abrir o recargar la página:
-resetear() //Por si el navegador guardó la última jugada
-siguiente()
+resetear(); //Por si el navegador guardó la última jugada
+siguiente();
 document.getElementById("veredictoDerecha").innerHTML = "Escribe el signo correcto para cada intervalo, luego presiona <em>Evaluar</em>."
 document.getElementById("veredictoIzquierda").innerHTML = "Cuando tu resultado sea correcto, presiona <em>Siguiente</em> para mostrar un nuevo acorde."
 alert("Para la mano derecha, anota los intervalos con respecto a la nota superior de arriba abajo (la alteración va antes si está escrita).\nPara la izquierda, anótalos de abajo arriba con respecto a la nota inferior.\n\n(Para más información, hasta abajo en la página puedes encontrar el enlace al manual introductorio a la musicografía braille de la ONCE)");
+
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        evaluar();
+    } else if (event.keyCode === 59 /*ñ*/) {
+        // La tecla "ñ" activa "siguiente"
+        siguiente();
+    }
+});
