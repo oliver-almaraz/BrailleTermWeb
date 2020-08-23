@@ -102,13 +102,18 @@ resetear(); //Por si el navegador guardó la última jugada
 siguiente();
 document.getElementById("veredictoDerecha").innerHTML = "Escribe el signo correcto para cada intervalo, luego presiona <em>Evaluar</em>."
 document.getElementById("veredictoIzquierda").innerHTML = "Cuando tu resultado sea correcto, presiona <em>Siguiente</em> para mostrar un nuevo acorde."
-alert("Para la mano derecha, anota los intervalos con respecto a la nota superior de arriba abajo (la alteración va antes si está escrita).\nPara la izquierda, anótalos de abajo arriba con respecto a la nota inferior.\n\n(Para más información, hasta abajo en la página puedes encontrar el enlace al manual introductorio a la musicografía braille de la ONCE)");
+alert("Para la mano derecha, anota los intervalos con respecto a la nota superior de arriba abajo.\
+    \nPara la izquierda, anótalos de abajo arriba con respecto a la nota inferior.\
+    \nSi hay alteración, esta se escribe antes del intervalo.\
+    \nPuedes presionar 'Enter' para evaluar tu respuesta y 's' para mostrar un nuevo acorde.\
+    \n\n(Para más información, hasta abajo en la página puedes encontrar el enlace al manual introductorio a la musicografía braille de la ONCE)"
+);
 
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13) /*Enter*/{
         evaluar();
-    } else if (event.keyCode === 59 /*ñ*/) {
-        // La tecla "ñ" activa "siguiente"
+    } else if (event.keyCode === 83 /*s*/) {
+        // La tecla "s" activa "siguiente"
         siguiente();
     }
 });

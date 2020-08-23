@@ -94,4 +94,14 @@ function siguiente() {
 //Al abrir o recargar la página:
 resetear() //Por si el navegador guardó la última jugada
 siguiente()
-document.getElementById("veredicto").innerHTML = "Escribe el signo braille correcto para cada nota, luego presiona <em>Evaluar</em>."
+document.getElementById("veredicto").innerHTML = "Escribe el signo braille correcto para cada nota, luego presiona <em>Evaluar</em> o 'Enter'.\
+    <br/>Para mostrar una nueva letra presiona <em>Siguiente</em> o 's'."
+
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) /*Enter*/{
+        evaluar();
+    } else if (event.keyCode === 83 /*s*/) {
+        // La tecla "s" activa "siguiente"
+        siguiente();
+    }
+});
