@@ -67,7 +67,7 @@ const respuestas = {
     50:{1:"7",2:[1,1,0,1,1,0]},
     51:{1:"8",2:[1,1,0,0,1,0]},
     52:{1:"9",2:[0,1,0,1,0,0]},
-    53:{1:"10",2:[0,1,0,1,1,0]}
+    53:{1:"0",2:[0,1,0,1,1,0]}
 }
 
 
@@ -144,9 +144,9 @@ function cb(punto) {
 function evaluar() {
     //Primero evalúa la respuesta y muestra el veredicto, luego genera una nueva letra si la respuesta fue correcta.
     if (respuesta === "vacia") {
-        document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em>";
+        document.getElementById("veredicto").innerHTML = "<em>Por favor elige una opción y presiona 'Siguiente'.</em><br/>";
     } else if (JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines)) {
-        document.getElementById("veredicto").innerHTML = "¡La respuesta es <em>correcta</em>!"; 
+        document.getElementById("veredicto").innerHTML = "¡La respuesta es <em>correcta</em>!<br/>"; 
     } else {
         document.getElementById("veredicto").innerHTML = "La respuesta es <strong>incorrecta</strong><br/>Prueba otra vez:";
     }
