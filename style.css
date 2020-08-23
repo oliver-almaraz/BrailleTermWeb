@@ -195,6 +195,25 @@ table {
     width: 170px;
 }
 
+/**************
+Regleta virtual
+***************/
+#regletaInput {
+    width: 800px;
+    border-spacing: 0;
+    font-size: 20px;
+}
+textarea {
+    background-color: #04050a;
+    border-color: #00CDFF;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+    color: #00CDFF;
+    padding: 0.5em 1.2em;
+    width: 500px;
+}
+
 /******
 Botones
 *******/
