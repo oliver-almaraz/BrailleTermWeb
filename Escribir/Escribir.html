@@ -20,7 +20,7 @@
         <meta property="og:url" content="https://oliver-almaraz.github.io/BrailleTermWeb/">
         
         <link rel="icon" href="icono.png" type="image/icon type">
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="../style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -29,15 +29,15 @@
             <div class="dropdownNav">
                 <button class="dropbtnNavWhenActive">Texto</button>
                 <div class="dropdownNav-content">
-                <a class="active">Leer braille</a>
-                <a href="./Escribir/Escribir.html">Escribir braille</a>
+                    <a href="../index.html">Leer braille</a>
+                    <a class="active">Escribir braille</a>
                 </div>  
             </div>
             <div class="dropdownNav">
                 <button class="dropbtnNav">Musicografía</button>
                 <div class="dropdownNav-content">
-                <a href="./Musicografia/ParaCiegos/Notas_silencios_duracion/Notas_silencios_duracion.html">Para ciegos</a>
-                <a href="./Musicografia/Notas_silencios_duracion/Notas_silencios_duracion.html">Para videntes</a>
+                <a href="../Musicografia/ParaCiegos/Notas_silencios_duracion/Notas_silencios_duracion.html">Para ciegos</a>
+                <a href="../Musicografia/Notas_silencios_duracion/Notas_silencios_duracion.html">Para videntes</a>
                 </div>  
             </div>
             <a id="about" href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a>
@@ -70,10 +70,37 @@
             <option value="1-6">Estudiar alfabeto, signos de puntuación y números</option>
         </select>
 
-        <p><label id="letraBraille"><br/>· ·<br/>· ·<br/>· ·<br/></label></p>
+        <br/><p><label id="letra">...</label></p><br/>
 
-        <p><label id="veredicto"><em>Presiona 'Siguiente' para mostrar un signo braille</em></label></p>
-        <p><input type="text" id="respuesta" placeholder="Respuesta:"></p>
+        <p><label id="veredicto">Presiona <em>Siguiente</em> o "s" para mostrar una letra, signo, o número<br/>
+            y luego "Enter" para evaluar tu respuesta.    
+        </label></p><br/>
+
+        <table id="cajetinesInput">
+            <body>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(1)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(4)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(2)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(5)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" onclick="cb(3)">
+                        <!--Caracter-->⠀<!--Unicode vacío-->
+                        <input type="checkbox" onclick="cb(6)">
+                    </td>
+                </tr>
+            </body>
+        </table>
         
         <p><input id="evaluar" type="Submit" onclick="evaluar()" value="Evaluar"></p>
         <p><input type="Submit" onclick="siguiente()" value="Siguiente"></p>
@@ -82,12 +109,12 @@
         <hr>
         
         <p><label><em>Recursos:</em></label></p>
-        <p><a href="./Alfabeto_braille_español.pdf" title="Tabla de signografía básica braille (español) en PDF" target="_blank">Ver tabla de signografía braille (PDF)</a></p>
-        <p><a href="Cómo_jugar.pdf" title="Cómo jugar" target="_blank">Cómo jugar (introducción al braille)</a></p>
+        <p><a href="../Alfabeto_braille_español.pdf" title="Tabla de signografía básica braille (español) en PDF" target="_blank">Ver tabla de signografía braille (PDF)</a></p>
+        <p><a href="../Cómo_jugar.pdf" title="Cómo jugar" target="_blank">Cómo jugar (introducción al braille)</a></p>
         <p><a href="https://github.com/oliver-almaraz/BrailleTermGUI" title="Repositorio en GitHub de la aplicación para escritorio" target="_blank">Aplicación para Windows, Linux y MacOS</a></p>
         <p><a href="mailto:oliver.almaraz@gmail.com" title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
 
-        <a href="https://es.wikipedia.org/wiki/GNU/Linux" title="GNU/Linux" target="_blank"><img src="tux.png" height="100px"/></a>
+        <a href="https://es.wikipedia.org/wiki/GNU/Linux" title="GNU/Linux" target="_blank"><img src="../tux.png" height="100px"/></a>
         <p><a id="pie" href="https://es.wikipedia.org/wiki/Software_libre" title="Software libre" target="_blank">Esta aplicación web es libre y de código abierto,<br/>así como el software utilizado para crearla.</a></p>
 
 <!-- Código JavaScript al final para no retrasar el render de la página -->

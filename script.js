@@ -29,7 +29,7 @@ function generarLetra() {
         num = generarNumAleatorio(rango[0],rango[1]);
     }
     respuesta = todasLasFilas[num][0]; //En 'respuesta' se almacena el valor que corresponde a la letra.
-    document.getElementById("letra").innerHTML = todasLasFilas[num][1]; // y en la Label se muestra el valor que corresponde al signo braille.
+    document.getElementById("letraBraille").innerHTML = todasLasFilas[num][1]; // y en la Label se muestra el valor que corresponde al signo braille.
 }
 
 function siguiente() {

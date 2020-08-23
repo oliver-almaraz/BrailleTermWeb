@@ -153,10 +153,15 @@ Letra braille dibujada
 con puntos y O (texto)
 **********************/
 
-#letra {
+#letraBraille {
     font-family: Courier, "Calibri", monospace;
     font-weight: bold;
     font-size: 25px;
+    color: #00CDFF;
+}
+#letra {
+    font-weight: bold;
+    font-size: 70px;
     color: #00CDFF;
 }
 
