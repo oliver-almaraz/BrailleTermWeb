@@ -148,7 +148,7 @@ function evaluar() {
     } else if (JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines)) {
         document.getElementById("veredicto").innerHTML = "¡La respuesta es <em>correcta</em>!"; 
     } else {
-        document.getElementById("veredicto").innerHTML = "La respuesta es <strong>incorrecta</strong>";
+        document.getElementById("veredicto").innerHTML = "La respuesta es <strong>incorrecta</strong><br/>Prueba otra vez:";
     }
         
     var mensaje = document.getElementById("mensaje").innerHTML;
