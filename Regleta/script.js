@@ -41,21 +41,19 @@ const respuestas = {
     33:{1:"ü",2:[1,1,0,0,1,1]},
 
     //Puntuación (34-43)
-    34:{1:".",2:[0,0,1,0,0,0]},
-    35:{1:",",2:[0,1,0,0,0,0]},
+    34:{1:"-",2:[0,0,1,0,0,1]},
+    35:{1:"*",2:[0,0,1,0,1,0]},
     36:{1:";",2:[0,1,1,0,0,0]},
     37:{1:":",2:[0,1,0,0,1,0]},
     38:{1:"?",2:[0,1,0,0,0,1]},
     39:{1:"!",2:[0,1,1,0,1,0]},
     40:{1:"(",2:[1,1,0,0,0,1]},
     41:{1:")",2:[0,0,1,1,1,0]},
-    42:{1:"-",2:[0,0,1,0,0,1]},
-    43:{1:"*",2:[0,0,1,0,1,0]},
-
-    //Numeral
-    44:{1:"#",2:[0,0,1,1,1,1]},
+    42:{1:".",2:[0,0,1,0,0,0]},
+    43:{1:",",2:[0,1,0,0,0,0]},
 
     // Números
+    44:{1:"0",2:[0,1,0,1,1,0]},
     45:{1:"1",2:[1,0,0,0,0,0]},
     46:{1:"2",2:[1,1,0,0,0,0]},
     47:{1:"3",2:[1,0,0,1,0,0]},
@@ -64,8 +62,7 @@ const respuestas = {
     50:{1:"6",2:[1,1,0,1,0,0]},
     51:{1:"7",2:[1,1,0,1,1,0]},
     52:{1:"8",2:[1,1,0,0,1,0]},
-    53:{1:"9",2:[0,1,0,1,0,0]},
-    54:{1:"0",2:[0,1,0,1,1,0]},
+    53:{1:"9",2:[0,1,0,1,0,0]}
 }
 var cajetines = {  //Lista que los checkboxes modifican
     1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,0,0,0,0], 4:[0,0,0,0,0,0],
@@ -74,9 +71,37 @@ var cajetines = {  //Lista que los checkboxes modifican
    13:[0,0,0,0,0,0],14:[0,0,0,0,0,0],15:[0,0,0,0,0,0],16:[0,0,0,0,0,0]
 }
 function enviar() {
+    var mayus = false;
+    var numeri = false;
+
     for (var cajetin=1; cajetin<17; cajetin++) {
+        //Para cada cajetín
         if (JSON.stringify(cajetines[cajetin])==="[0,0,0,0,0,0]") { // Cajetín vacío = espacio
             document.getElementById("outputRegleta").value += "\ ";
+            mayus = false;
+            numeri = false;
+        } else if (JSON.stringify(cajetines[cajetin])==="[0,0,1,1,1,1]") { // Numeral
+            numeri = true;
+            mayus = false;
+        } else if (JSON.stringify(cajetines[cajetin])==="[0,0,0,1,0,1]") { //Mayus
+            mayus = true;
+            numeri = false;
+        } 
+        // Loops últimas opciones por eficiencia
+        else if (numeri) {
+            for (respuesta=42; respuesta<54; respuesta++) {
+                if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
+                    document.getElementById("outputRegleta").value += respuestas[respuesta][1];
+                }
+            }
+        } else if (mayus) {
+            for (respuesta=1; respuesta<34; respuesta++) {
+                if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
+                    var str = respuestas[respuesta][1];
+                    document.getElementById("outputRegleta").value += str.toUpperCase();
+                    mayus = false;
+                }
+            }
         } else {
             for (respuesta=1; respuesta<44; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
@@ -85,8 +110,8 @@ function enviar() {
             }
         }
     }
-    document.getElementById("outputRegleta").value += "\n"
-    desmarcar();
+    document.getElementById("outputRegleta").value += "\n";
+    document.getElementById("mensaje").innerHTML = "";
 }
 function cb(cajetin, punto) {
     //Cada acción de un checkbox modifica la lista "cajetines"

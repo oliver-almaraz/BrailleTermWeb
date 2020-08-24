@@ -46,22 +46,22 @@
 
         <h1>BrailleTerm</h1>
         <h3>
-            <em>Regleta braille vitual</em>: si no tienes una regleta braille puedes practicar usando esta.
+            <em>Regleta vitual</em>: si no tienes una regleta braille puedes practicar usando esta.
         </h3>
         
         <hr>
         
-        <label>
-            Cuando acabes de escribir presiona 'Enter' para visualizar el texto que escribiste.<br/>
-            Nota: por ahora no funciona con números ni signos que no estén en la
-            <a href="../Alfabeto_braille_español.pdf" title="Tabla de signografía básica braille (español) en PDF" target="_blank"><em>tabla</em></a> (ver <em>Recursos</em>).
-        </label>
         <br/><br/>
 
         <textarea cols="16" rows="2" id="outputRegleta"></textarea>
 
-        <br/>
-        <br/>
+        <br/><br/>
+        <label id="mensaje">
+            Cuando acabes de escribir presiona <em>Enviar</em> o 'Enter' para visualizar el texto que escribiste.<br/>
+            Nota: por ahora solo funciona con los signos que están en esta
+            <a href="../Alfabeto_braille_español.pdf" title="Tabla de signografía básica braille (español) en PDF" target="_blank"><em>tabla</em></a> (ver <em>Recursos</em>).
+        </label>
+        <br/><br/>
 
         <table id="regletaInput">
             <body>
@@ -268,7 +268,8 @@
 
         
         <p><input id="enviar" type="Submit" onclick="enviar()" value="Enviar"></p>
-        <p><input type="Submit" onclick="limpiar()" value="Limpiar"></p>
+        <p><input type="Submit" onclick="desmarcar()" value="Desmarcar regleta"></p>
+        <p><input type="Submit" onclick="limpiar()" value="Borrar texto"></p>
 
         <hr>
         
