@@ -50,7 +50,22 @@ const respuestas = {
     40:{1:"(",2:[1,1,0,0,0,1]},
     41:{1:")",2:[0,0,1,1,1,0]},
     42:{1:"-",2:[0,0,1,0,0,1]},
-    43:{1:"*",2:[0,0,1,0,1,0]}
+    43:{1:"*",2:[0,0,1,0,1,0]},
+
+    //Numeral
+    44:{1:"#",2:[0,0,1,1,1,1]},
+
+    // Números
+    45:{1:"1",2:[1,0,0,0,0,0]},
+    46:{1:"2",2:[1,1,0,0,0,0]},
+    47:{1:"3",2:[1,0,0,1,0,0]},
+    48:{1:"4",2:[1,0,0,1,1,0]},
+    49:{1:"5",2:[1,0,0,0,1,0]},
+    50:{1:"6",2:[1,1,0,1,0,0]},
+    51:{1:"7",2:[1,1,0,1,1,0]},
+    52:{1:"8",2:[1,1,0,0,1,0]},
+    53:{1:"9",2:[0,1,0,1,0,0]},
+    54:{1:"0",2:[0,1,0,1,1,0]},
 }
 var cajetines = {  //Lista que los checkboxes modifican
     1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,0,0,0,0], 4:[0,0,0,0,0,0],
@@ -60,16 +75,15 @@ var cajetines = {  //Lista que los checkboxes modifican
 }
 function enviar() {
     for (var cajetin=1; cajetin<17; cajetin++) {
-        for (respuesta=1; respuesta<44; respuesta++) {
-            if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
-                document.getElementById("outputRegleta").value += respuestas[respuesta][1];
-            }
-            continue;
-        }
         if (JSON.stringify(cajetines[cajetin])==="[0,0,0,0,0,0]") { // Cajetín vacío = espacio
-            document.getElementById("outputRegleta").value += "\ "
+            document.getElementById("outputRegleta").value += "\ ";
+        } else {
+            for (respuesta=1; respuesta<44; respuesta++) {
+                if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
+                    document.getElementById("outputRegleta").value += respuestas[respuesta][1];
+                }
+            }
         }
-        continue;
     }
     document.getElementById("outputRegleta").value += "\n"
     desmarcar();
