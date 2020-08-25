@@ -62,7 +62,14 @@ const respuestas = {
     50:{1:"6",2:[1,1,0,1,0,0]},
     51:{1:"7",2:[1,1,0,1,1,0]},
     52:{1:"8",2:[1,1,0,0,1,0]},
-    53:{1:"9",2:[0,1,0,1,0,0]}
+    53:{1:"9",2:[0,1,0,1,0,0]},
+
+    // Signos matemáticos
+    54:{1:"+",2:[0,1,1,0,1,0]},
+    55:{1:"-",2:[0,0,1,0,0,1]},
+    56:{1:"x",2:[0,1,1,0,0,1]},
+    57:{1:"=",2:[0,1,1,0,1,1]},
+    58:{1:"/",2:[0,1,0,0,1,1]}
 }
 var cajetines = {  //Lista que los checkboxes modifican
     1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,0,0,0,0], 4:[0,0,0,0,0,0],
@@ -89,7 +96,7 @@ function enviar() {
         } 
         // Loops últimas opciones por eficiencia
         else if (numeri) {
-            for (respuesta=42; respuesta<54; respuesta++) {
+            for (respuesta=42; respuesta<59; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
                     document.getElementById("outputRegleta").value += respuestas[respuesta][1];
                 }
@@ -136,7 +143,6 @@ function desmarcar() {
     }
 }
 function limpiar() {
-    desmarcar()
     document.getElementById("outputRegleta").value = ""
 }
 // Al presionar enter después de escribir en la casilla de input se activa "enviar()".
