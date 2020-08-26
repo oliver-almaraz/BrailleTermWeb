@@ -33,7 +33,7 @@ const respuestas = {
     8 : {1:`${reg3}${g}`, 2:"Sol 3"},
     9 : {1:`${bemol}${reg3}${a}`, 2:"La bemol 3"},
     10 : {1:`${reg3}${a}`, 2:"La 3"},
-    11 : {1:`${becuadro} ${reg3}${a}`, 2:"La becuadro 3"},
+    11 : {1:`${becuadro}${reg3}${a}`, 2:"La becuadro 3"},
     12 : {1:`${reg3}${b}`, 2:"Si 3"},
 
     13 : {1:`${reg4}${c}`, 2:"Do 4"},
