@@ -40,7 +40,7 @@ const respuestas = {
 
     7 : reg6+d+quinta+octava+" "+reg4+f+segunda+cuarta,
     8 : reg6+d+sexta+octava+" "+reg4+f+tercera+cuarta,
-    9 : reg6+e+tercera+sexta+" "+reg4+g+segunda+octava,
+    9 : reg6+e+quinta+octava+" "+reg4+g+segunda+octava,
     10 : reg6+e+septima+octava+" "+reg4+g+tercera+quinta,
     11 : reg6+d+sexta+septima+" "+reg4+a+tercera+cuarta,
     12 : reg6+e+sexta+octava+" "+reg4+a+tercera+quinta,
@@ -53,7 +53,7 @@ const respuestas = {
     18 : reg6+c+becuadro+quinta+" "+reg4+d+bemol+quinta,
 
     19 : reg6+c+bemol+cuarta+" "+bemol+reg4+e+bemol+quinta,
-    20 : bemol+reg5+b+bemol+segunda+" "+bemol+reg4+g+bemol+tercera,
+    20 : bemol+reg5+e+bemol+segunda+" "+bemol+reg4+g+bemol+tercera,
     21 : sostenido+reg6+c+sostenido+sexta+" "+sostenido+reg4+f+sostenido+tercera,
     22 : reg6+c+sostenido+septima+" "+reg4+f+becuadro+tercera,
     23 : sostenido+reg6+d+sostenido+octava+" "+sostenido+reg4+g+becuadro+tercera,
