@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175298715-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-175298715-1');
+        </script>
+
+        <title>BrailleTerm Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta property="og:title" content="BrailleTerm Web">
+        <meta property="og:image" content="PagePreview.png">
+        <meta property="og:description" content="Repasa signografía básica braille y musicografía.">
+        <meta property="og:url" content="https://oliver-almaraz.github.io/BrailleTermWeb/">
+        
+        <link rel="icon" href="icono.png" type="image/icon type">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <!--PANEL NAVEGACIÓN SUPERIOR-->
+        <div class="navbar">
+            <div class="dropdownNav">
+                <button class="dropbtnNav">Texto</button>
+                <div class="dropdownNav-content">
+                    <a href="index.html">Leer braille</a>
+                    <a href="./Escribir/Escribir.html">Escribir braille</a>
+                    <a href="./Regleta/Regleta.html">Regleta virtual</a>
+                </div>  
+            </div>
+            <div class="dropdownNav">
+                <button class="dropbtnNav">Musicografía</button>
+                <div class="dropdownNav-content">
+                <a href="./Musicografia/ParaCiegos/Notas_silencios_duracion/Notas_silencios_duracion.html">Para ciegos</a>
+                <a href="./Musicografia/Notas_silencios_duracion/Notas_silencios_duracion.html">Para videntes</a>
+                </div>  
+            </div>
+            <a id="about" href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a>
+        </div>
+
+        <h1>¡Bienvenido a BrailleTerm!</h1>
+        <hr>
+        <p>
+            Un signo braille consiste en seis puntos, ordenados en dos columnas de tres puntos cada una.
+            Los puntos se numeran de arriba a abajo y de izquierda a derecha:
+        </p>
+        <p><label class="letraBraille"><br/>1 4<br/>2 5<br/>3 6<br/></label></p>
+        <p>
+            Cada signo braille se conforma de una combinación específica de esos seis puntos.
+            Por ejemplo, el signo para la letra 's' contiene los puntos 2, 3, y 4.
+        </p>
+        <p><label class="letraBraille"><br/>· O<br/>O ·<br/>O ·<br/></label></p>
+        <p>
+            Para facilitar el estudio del alfabeto braille,
+            generalmente se muestra como una tabla con filas (o series).
+            Notarás que las letras de las filas 1 y 2 son muy parecidas, y ambas tienen 10 letras.
+            Las demás filas son menos parecidas,
+            pero contienen las letras que menos se ocupan y los signos de puntuación.
+        </p>
+        <p>
+            <a href="Alfabeto_braille_español.pdf" target="_blank">Revisa la tabla de signografía básica del español</a>
+            diseñada especialmente para este juego.
+        </p>
+        <p>
+            Te sugiero comenzar estudiando solo las letras de la primera fila,
+            y cuando te sientas seguro, proceder a estudiar solo la segunda fila.
+            Cuando puedas responder correctamente y sin dudar, estudia las primeras dos filas juntas.
+            De esa manera, irás sumando lo que vas aprendiendo a lo que ya conocías, y repasando con
+            este método podrás dominar todo el alfabeto braille en pocos días y con poco esfuerzo.
+            Podrás regresar a este juego siempre que quieras repasar, pues verás que las letras que
+            se ocupan muy poco, como <em>'w'</em> o <em>'ü'</em> se olvidan fácilmente.
+        </p>
+        <p>
+            Para jugar, simplemente elige qué signos quieres estudiar, presiona
+            'Evaluar' (o la tecla ‘Enter’) y sabrás si tu respuesta fue correcta.
+            Si lo fue, una nueva letra se mostrará automáticamente. Solo se muestran letras minúsculas,
+            pues para indicar que una letra es mayúscula simplemente se antepone a la misma letra el
+            signo de mayúscula (puntos 4 y 6). No obstante, si escribes la
+            letra mayúscula en el juego igualmente será evaluada como correcta.
+        </p>
+        <p>
+            En el caso de '¿?' y de '¡!', escribe solo el signo que cierra. Es decir: <em>!</em> y <em>?</em>
+        </p>
+        <p>
+            Para una guía mucho más completa y con respaldo institucional,
+            te sugiero consultar los documentos técnicos de la Organización Nacional de Ciegos Españoles (ONCE),
+            disponibles para descarga gratuita desde su
+            <a href="https://www.once.es/servicios-sociales/braille/documentos-tecnicos/documentos-tecnicos-relacionados-con-el-braille/documentos-tecnicos-relacionados-con-el-braille">
+                sitio oficial
+            </a>.
+        </p>
+        <hr>
+        <p><a href="Cómo_jugar.pdf" target="_blank">Descarga esta página en PDF</a></p>
+    </body>
+</html>
