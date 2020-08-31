@@ -83,7 +83,7 @@ function NumAleatorio() {
 }
 function evaluar() {
     var respuestaOrdenada = respuestas[numeroAnterior][1].split('').sort().join('');
-    var inputOrdenado = document.getElementById("respuesta").value.split('').sort().join('');
+    var inputOrdenado = document.getElementById("respuesta").value.split('').sort().join('').toLowerCase();
 
     if(respuestaOrdenada === inputOrdenado) { //Respuesta correcta
         siguiente();
