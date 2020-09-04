@@ -203,6 +203,9 @@ Regleta virtual
     border-collapse: collapse;
     font-size: 20px;
 }
+#regletaInput28 {
+    width: 1335px;
+}
 textarea {
     background-color: #04050a;
     border-color: #00CDFF;
@@ -214,6 +217,9 @@ textarea {
     color: #00CDFF;
     padding: 0.5em 1.2em;
     width: 390px;
+}
+#outputRegleta28 {
+    width: 685px;
 }
 
 /******
