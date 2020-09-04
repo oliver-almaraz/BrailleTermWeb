@@ -38,12 +38,12 @@ También es posible utilizar la aplicación web sin conexión a internet en celu
 
 1. <a href="https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip" target="_blank">Descarga los archivos</a>
 2. Desde la Play Store, descarga las siguientes aplicaciones:
-  - **RAR** (de *RARLAB*)
-  - **WebCode** (de *Alif software*)
+    - **RAR** (de *RARLAB*)
+    - **WebCode** (de *Alif software*)
 3. Ve a tu carpeta de descargas, abre la carpeta comprimida *BrailleTermWeb-master.zip*, luego:
-  - Selecciona (sin abrirla) la carpeta que está dentro (presiónala hasta que la parte superior diga *1 seleccionado*)
-  - En el menú (esquina superior derecha) selecciona *Extraer a*
-  - Te mostrará tu carpeta de descargas, solo selecciona el botón **Extraer** (esquina inferior derecha).
+    - Selecciona (sin abrirla) la carpeta que está dentro (presiónala hasta que la parte superior diga *1 seleccionado*)
+    - En el menú (esquina superior derecha) selecciona *Extraer a*
+    - Te mostrará tu carpeta de descargas, solo selecciona el botón **Extraer** (esquina inferior derecha).
 4. Abre **WebCode** y en el menú (esquina superior derecha) elige **Open**
 5. Navega hasta la carpeta donde se extrajeron los archivos (normalmente es > storage > emulated > 0 > Downloads > BrailleTermWeb-master )
 6. Selecciona el archivo **index.html**
