@@ -26,13 +26,31 @@ Por último, en lugar de hacer una aplicación móvil para Android e iOS (para p
 
 ### También es posible usar la aplicación web sin conexión a internet (offline).
 
-En tu **navegador movil**, el sitio se guarda en la memoria después de ocuparlo un rato, así que si no cierras la pestaña de BrailleTerm Web, podrás seguir ocupando el juego cuando quieras, incluso si dejas de tener conexión a internet.
-
 Si prefieres la aplicación web a la aplicación para escritorio (y no te culpo), pero no siempre tienes acceso a internet, también puedes utilizar **BralleTerm Web** desde tu **computadora** aun sin conexión.
-Para ello, [descarga el código fuente](https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip) de esta aplicación, y abre el archivo **index.html** con tu navegador
+Para ello, <a href="https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip" target="_blank">descarga los archivos</a> de esta aplicación, y abre el archivo **index.html** con tu navegador
 (click derecho, 'abrir con').
 
 **Nota:** Es importante que todos los archivos que se descargan junto con el fichero **index.html** estén en la misma carpeta.
+
+#### En dispositivos **Android**
+
+También es posible utilizar la aplicación web sin conexión a internet en celulares y tabletas Android, pero para ello se requieren algunos pasos extra (solo tendrás que realizarlos la primera vez):
+
+1. <a href="https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip" target="_blank">Descarga los archivos</a>
+2. Desde la Play Store, descarga las siguientes aplicaciones gratuitas:
+    - **RAR** (de *RARLAB*)
+    - **WebCode** (de *Alif software*)
+3. Ve a tu carpeta de descargas, abre la carpeta comprimida *BrailleTermWeb-master.zip*, luego:
+    - Selecciona (sin abrirla) la carpeta que está dentro (presiónala hasta que la parte superior diga *1 elemento seleccionado*)
+    - En el menú (esquina superior derecha) selecciona *Extraer en*
+    - Te mostrará tu carpeta de descargas, solo selecciona el botón **EXTRAER** (esquina inferior derecha).
+4. Abre **WebCode** y en el menú (esquina superior derecha) elige **Open**
+5. Navega hasta la carpeta donde se extrajeron los archivos (normalmente es > storage > emulated > 0 > Downloads > BrailleTermWeb-master )
+6. Selecciona el archivo **index.html**
+
+**¡Listo!**
+La próxima vez solo deberás abrir **WebCode** y todo estará como lo dejaste.
+
 
 ### Captura de pantalla:
 
