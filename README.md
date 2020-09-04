@@ -26,13 +26,24 @@ Por último, en lugar de hacer una aplicación móvil para Android e iOS (para p
 
 ### También es posible usar la aplicación web sin conexión a internet (offline).
 
-En tu **navegador movil**, el sitio se guarda en la memoria después de ocuparlo un rato, así que si no cierras la pestaña de BrailleTerm Web, podrás seguir ocupando el juego cuando quieras, incluso si dejas de tener conexión a internet.
-
 Si prefieres la aplicación web a la aplicación para escritorio (y no te culpo), pero no siempre tienes acceso a internet, también puedes utilizar **BralleTerm Web** desde tu **computadora** aun sin conexión.
 Para ello, [descarga el código fuente](https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip) de esta aplicación, y abre el archivo **index.html** con tu navegador
 (click derecho, 'abrir con').
 
 **Nota:** Es importante que todos los archivos que se descargan junto con el fichero **index.html** estén en la misma carpeta.
+
+#### En dispositivos **Android**
+
+También es posible utilizar la aplicación web sin conexión a internet en celulares y tabletas Android, pero para ello se requieren algunos pasos extra:
+
+1. [Descarga los archivos](https://drive.google.com/drive/folders/1EHR6v9GkpkwU9vn5FA2BefSzlLaPQulM?usp=sharing)
+2. Desde la Play Store, descarga la aplicación **WebCode** (de *Alif software*).
+3. Abre **WebCode** y en el menú (esquina superior derecha) elige **Open**
+4. Navega hasta la carpeta donde se descargaron los archivos (normalmente es > storage > emulated > 0 > Downloads > BrailleTerm Web)
+5. Selecciona el archivo **index.html**
+
+**¡Listo!**
+
 
 ### Captura de pantalla:
 
