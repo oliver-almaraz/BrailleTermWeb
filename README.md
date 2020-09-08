@@ -37,7 +37,7 @@ Para ello, <a href="https://github.com/oliver-almaraz/BrailleTermWeb/archive/mas
 También es posible utilizar la aplicación web sin conexión a internet en celulares y tabletas Android, pero para ello se requieren algunos pasos extra (solo tendrás que realizarlos la primera vez):
 
 1. <a href="https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip" target="_blank">Descarga los archivos</a>
-2. Desde la Play Store, descarga las siguientes aplicaciones gratuitas:
+2. Desde la Play Store, descarga las siguientes aplicaciones **gratuitas**:
     - **RAR** (de *RARLAB*)
     - **WebCode** (de *Alif software*)
 3. Ve a tu carpeta de descargas, abre la carpeta comprimida *BrailleTermWeb-master.zip*, luego:
