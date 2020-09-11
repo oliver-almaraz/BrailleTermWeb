@@ -11,28 +11,14 @@ Con un apartado diseñado especialmente para personas ciegas o con visibilidad r
 
 
 
-### Versiones para escritorio (Windows, Linux y MacOS)
+### Versiones para escritorio (Windows y GNU/Linux)
 
-Mi finalidad era crear un programa simple que funcionara en casi cualquier plataforma, así que primero me
-enfoqué en crear un [script que se ejecutara desde la terminal](https://github.com/oliver-almaraz/BrailleTerm) (de ahí el nombre del programa, 'BrailleTerm').
-Sin embargo, no consideré que, al estar escrito en Python (3.8), los usuarios de Windows tendrían que descargar el intérprete.
-
-Estando consciente de que la mayoría de los participantes del curso al que está dedicado este programa
-usarían Windows, me tomé el tiempo para hacer también una [versión con una interfaz gráfica](https://github.com/oliver-almaraz/BrailleTermGUI) y lo
-empaqueté como un [binario (.exe) para Windows](https://github.com/oliver-almaraz/BrailleTermGUI/releases/tag/Win_v1.0) y como un [ejecutable para Linux](https://github.com/oliver-almaraz/BrailleTermGUI/releases/tag/Linux_v1.0).
-
-Por último, en lugar de hacer una aplicación móvil para Android e iOS (para poder publicar aplicaciones gratuitas en la AppStore debía pagar una suscripción anual de casi 100 USD) decidí mejor hacer **esta versión web** (con JavaScript) **optimizada para navegadores móviles**.
+Si no siempre cuentas con una conexión a internet o la pagina web no se visualiza correctamente en tu navegador
+también puedes utilizar la aplicación de escritorio de BrailleTerm en tu laptop o PC.
+Visita la sección de [releases](https://github.com/oliver-almaraz/BrailleTermWeb/releases) y descarga el la versión para tu sistema operativo.
 
 
-### También es posible usar la aplicación web sin conexión a internet (offline).
-
-Si prefieres la aplicación web a la aplicación para escritorio (y no te culpo), pero no siempre tienes acceso a internet, también puedes utilizar **BralleTerm Web** desde tu **computadora** aun sin conexión.
-Para ello, <a href="https://github.com/oliver-almaraz/BrailleTermWeb/archive/master.zip" target="_blank">descarga los archivos</a> de esta aplicación, y abre el archivo **index.html** con tu navegador
-(click derecho, 'abrir con').
-
-**Nota:** Es importante que todos los archivos que se descargan junto con el fichero **index.html** estén en la misma carpeta.
-
-#### En dispositivos **Android**
+### En dispositivos **Android**
 
 También es posible utilizar la aplicación web sin conexión a internet en celulares y tabletas Android, pero para ello se requieren algunos pasos extra (solo tendrás que realizarlos la primera vez):
 
