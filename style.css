@@ -2,7 +2,7 @@
 Panel navegación superior
 *************************/
 
- /* Navbar container */
+ /* Navbar */
 .navbar {
     padding: 0;
     max-width: 700px;
@@ -12,7 +12,7 @@ Panel navegación superior
     overflow: hidden;
 }
 #about {float: right;}
-/* Links inside the navbar */
+/* Elementos de la navbar */
 .navbar a {
     float: left;
     font-size: 16px;
@@ -21,7 +21,7 @@ Panel navegación superior
     padding: 14px 16px;
     text-decoration: none;
 }
-/* The dropdown container */
+/* Dropdown container */
 .dropdownNav {
     float: left;
     overflow: hidden;
@@ -35,7 +35,7 @@ Panel navegación superior
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0; /* Important for vertical align on mobile phones */
+    margin: 0; /* Importante para dispositivos móbiles */
 }
 .dropdownNav .dropbtnNavWhenActive {
     font-size: 16px;
@@ -46,15 +46,15 @@ Panel navegación superior
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0; /* Important for vertical align on mobile phones */
+    margin: 0;
 }
-/* Add a background color to navbar links on hover */
+/* BG color de los elem. de la navbar (hover) */
 .navbar a:hover,.dropdownNav:hover .dropbtnNav,
 .dropdownNav:hover .dropbtnNavWhenActive {
     background-color: #080808bd;
     box-shadow: 0 4px 16px #018791;
 }
-/* Dropdown content (hidden by default) */
+/* Dropdown content (oculto) */
 .dropdownNav-content {
     display: none;
     position: absolute;
@@ -64,7 +64,7 @@ Panel navegación superior
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-/* Links inside the dropdown */
+/* Elementos del dropdown */
 .dropdownNav-content a {
 float: none;
 color: #00ccff;
@@ -73,7 +73,7 @@ text-decoration: none;
 display: block;
 text-align: left;
 }
-/* Show the dropdown menu on hover */
+/* Muestra el dropdow hover/click */
 .dropdownNav:hover .dropdownNav-content {
     display: block;
 }
