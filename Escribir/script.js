@@ -167,6 +167,12 @@ function resetear() {
     cajetines = [0,0,0,0,0,0];
 }
 
+function desactivarCSS() {
+    for ( i=0; i<document.styleSheets.length; i++) {
+        void(document.styleSheets.item(i).disabled=true);
+    }
+}
+
 // Al presionar enter se activa evaluar().
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) /*Enter*/{

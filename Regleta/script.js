@@ -145,6 +145,12 @@ function desmarcar() {
 function limpiar() {
     document.getElementById("outputRegleta").value = ""
 }
+
+function desactivarCSS() {
+    for ( i=0; i<document.styleSheets.length; i++) {
+        void(document.styleSheets.item(i).disabled=true);
+    }
+}
 // Al presionar enter después de escribir en la casilla de input se activa "enviar()".
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {

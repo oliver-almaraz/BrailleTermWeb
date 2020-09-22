@@ -103,6 +103,12 @@ function evaluar() {
     }
 }
 
+function desactivarCSS() {
+    for ( i=0; i<document.styleSheets.length; i++) {
+        void(document.styleSheets.item(i).disabled=true);
+    }
+}
+
 // Al presionar enter después de escribir en la casilla de input se activa el botón 'Evaluar'.
 var inputField = document.getElementById("respuesta");
 inputField.addEventListener("keyup", function(event) {

@@ -97,6 +97,12 @@ siguiente()
 document.getElementById("veredicto").innerHTML = "Escribe el signo braille correcto para cada nota, luego presiona <em>Evaluar</em> o 'Enter'.\
     <br/>Para mostrar una nueva letra presiona <em>Siguiente</em> o 's'."
 
+function desactivarCSS() {
+    for ( i=0; i<document.styleSheets.length; i++) {
+        void(document.styleSheets.item(i).disabled=true);
+    }
+}
+
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) /*Enter*/{
         evaluar();
