@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <title>BrailleTerm Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta property="og:title" content="BrailleTerm Web">
+        <meta property="og:image" content="../PagePreview.png">
+        <meta property="og:description" content="Repasa signografía básica braille y musicografía.">
+        <meta property="og:url" content="https://oliver-almaraz.github.io/BrailleTermWeb/">
+        
+        <link rel="icon" href="../icono.png" type="image/icon type">
+        <link href="../style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <button id="NoCSS" onclick="desactivarCSS()">Página accesible</button>
+        <!--PANEL NAVEGACIÓN SUPERIOR-->
+        <div class="navbar">
+            <div class="dropdownNav">
+                <button class="dropbtnNavWhenActive">Texto</button>
+                <div class="dropdownNav-content">
+                    <a href="../index.html">Leer braille</a>
+                    <a href="../Escribir/Escribir.html">Escribir braille</a>
+                    <a href="../Regleta/Regleta.html">Regleta virtual</a>
+                    <a class="active">Máquina 'Parkins'</a>
+                </div>  
+            </div>
+            <div class="dropdownNav">
+                <button class="dropbtnNav">Musicografía</button>
+                <div class="dropdownNav-content">
+                <a href="../Musicografia/ParaCiegos/Notas_silencios_duracion/Notas_silencios_duracion.html">Para ciegos</a>
+                <a href="../Musicografia/Notas_silencios_duracion/Notas_silencios_duracion.html">Para videntes</a>
+                </div>  
+            </div>
+            <a id="about" href="https://github.com/oliver-almaraz/BrailleTermWeb" target="_blank">Acerca de</a>
+        </div>
+
+
+        <h1>BrailleTerm</h1>
+        <h3>Escribe signos braille utilizando seis teclas de tu teclado Qwerty:<br/> (F = punto 1, D=2, S=3 J=4, K=5, L=6).
+        </h3>
+
+        <hr>
+            <p>
+                <textarea name="outputBraille" id="outputBraille" placeholder="Los signos braille se mostrarán aquí..." cols="27" rows="10"></textarea>
+                <textarea name="outputTexto" id="outputTexto" placeholder="Y su equivalente en español acá." cols="27" rows="10"></textarea>
+            </p>
+            <br/> <br/> <br/>
+            <label><em>Escribe aquí la combinación de puntos <br> y presiona 'enter' para enviar:</em></label>
+            <p><input type="text" id="input" autofocus placeholder="fdsjkl"></p>
+            <p><input id="enviar" type="Submit" onclick="convertir(document.getElementById('input').value);" value="Enviar"></p>
+            <p><input id="borrarTodo" type="Submit" onclick="borrarTodo()" value="Borrar todo"></p>
+
+            <script src="script.js"></script>
+        <hr>
+
+        <p><a href="mailto:oliver.almaraz@gmail.com"
+            title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
+        <p><a href="https://github.com/oliver-almaraz/Parkins/" title="Aplicación para escritorio"
+            target="_blank">Aplicación para escritorio (Linux)</a></p>
+        <p><a id="pie" href="https://es.wikipedia.org/wiki/Software_libre" title="Software libre"
+            target="_blank">Esta aplicación web es libre y de código abierto,<br/>así como el software utilizado para crearla.</a></p>
+
+</body>
+</html>
