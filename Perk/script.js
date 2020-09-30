@@ -34,7 +34,7 @@ function convertir(input) {
     var texto = document.getElementById("outputTexto");
 
     // Se ordena el input alfabéticamente:
-    input = input.split('').sort().join('');
+    input = input.split('').sort().join('').toLowerCase();
 
     // Los espacios pasan tal cual
     if (input == " ") {
