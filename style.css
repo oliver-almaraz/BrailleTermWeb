@@ -224,10 +224,10 @@ textarea {
     font-size: 24px;
     color: #00CDFF;
     padding: 0.5em 1.2em;
-    width: 390px;
-}
-#outputRegleta28 {
     width: 685px;
+}
+#outputRegleta {
+    width: 390px;
 }
 
 /******
