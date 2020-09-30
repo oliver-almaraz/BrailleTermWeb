@@ -28,7 +28,6 @@ const primeras10letras = ["a","b","c", "d", "e", "f", "g", "h", "i","j"];
 var MAYUS = false;
 var NUMERAL = false;
 
-
 function convertir(input) {
     var textoBrai = document.getElementById("outputBraille");
     var texto = document.getElementById("outputTexto");
@@ -45,21 +44,21 @@ function convertir(input) {
 		return 0;
     }
      else if (input == "jl") { // Signo de mayúscula
-			MAYUS = true;
-			NUMERAL = false;
-      textoBrai.value += braille[40];
-      return 0;
+		MAYUS = true;
+		NUMERAL = false;
+      	textoBrai.value += braille[40];
+      	return 0;
     }
      else if (input == "jkls") { // Numeral
-			NUMERAL = true;
-			MAYUS = false; // Previene un error del usuario
-      textoBrai.value += braille[60];
-      return 0;
+		NUMERAL = true;
+		MAYUS = false; // Previene un error del usuario
+      	textoBrai.value += braille[60];
+		return 0;
     }
     // else...
     /***********************************
-		 * SI ES UNA LETRA O NÚMERO BRAILLE
-		************************************/
+	 * SI ES UNA LETRA O NÚMERO BRAILLE
+	************************************/
 
 	for (var i = 0; i <= 64; i++) {
 		if (input == perk[i]) {
