@@ -33,7 +33,7 @@ function convertir(input) {
     var textoBrai = document.getElementById("outputBraille");
     var texto = document.getElementById("outputTexto");
 
-    // Se ordena el input alfabéticamente:
+    // Se ordena el input alfabéticamente y se pasa a lowercase:
     input = input.split('').sort().join('').toLowerCase();
 
     // Los espacios pasan tal cual
