@@ -51,25 +51,27 @@ const respuestas = {
     41:{1:")",2:[0,0,1,1,1,0]},
     42:{1:".",2:[0,0,1,0,0,0]},
     43:{1:",",2:[0,1,0,0,0,0]},
+    44:{1:"@",2:[0,0,0,0,1,0]},
+    45:{1:"|",2:[0,0,0,1,1,1]},
 
     // Números
-    44:{1:"0",2:[0,1,0,1,1,0]},
-    45:{1:"1",2:[1,0,0,0,0,0]},
-    46:{1:"2",2:[1,1,0,0,0,0]},
-    47:{1:"3",2:[1,0,0,1,0,0]},
-    48:{1:"4",2:[1,0,0,1,1,0]},
-    49:{1:"5",2:[1,0,0,0,1,0]},
-    50:{1:"6",2:[1,1,0,1,0,0]},
-    51:{1:"7",2:[1,1,0,1,1,0]},
-    52:{1:"8",2:[1,1,0,0,1,0]},
-    53:{1:"9",2:[0,1,0,1,0,0]},
+    46:{1:"0",2:[0,1,0,1,1,0]},
+    47:{1:"1",2:[1,0,0,0,0,0]},
+    48:{1:"2",2:[1,1,0,0,0,0]},
+    49:{1:"3",2:[1,0,0,1,0,0]},
+    50:{1:"4",2:[1,0,0,1,1,0]},
+    51:{1:"5",2:[1,0,0,0,1,0]},
+    52:{1:"6",2:[1,1,0,1,0,0]},
+    53:{1:"7",2:[1,1,0,1,1,0]},
+    54:{1:"8",2:[1,1,0,0,1,0]},
+    55:{1:"9",2:[0,1,0,1,0,0]},
 
     // Signos matemáticos
-    54:{1:"+",2:[0,1,1,0,1,0]},
-    55:{1:"-",2:[0,0,1,0,0,1]},
-    56:{1:"x",2:[0,1,1,0,0,1]},
-    57:{1:"=",2:[0,1,1,0,1,1]},
-    58:{1:"/",2:[0,1,0,0,1,1]}
+    56:{1:"+",2:[0,1,1,0,1,0]},
+    57:{1:"-",2:[0,0,1,0,0,1]},
+    58:{1:"x",2:[0,1,1,0,0,1]},
+    59:{1:"=",2:[0,1,1,0,1,1]},
+    60:{1:"/",2:[0,1,0,0,1,1]}
 }
 var cajetines = {  //Lista que los checkboxes modifican
     1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,0,0,0,0], 4:[0,0,0,0,0,0],
@@ -93,10 +95,13 @@ function enviar() {
         } else if (JSON.stringify(cajetines[cajetin])==="[0,0,0,1,0,1]") { //Mayus
             mayus = true;
             numeri = false;
-        } 
+        } else if (JSON.stringify(cajetines[cajetin])==="[0,0,0,0,1,0]" &&
+                    numeri) { //Separador de nums y letras
+            numeri =false;
+        }
         // Loops últimas opciones por eficiencia
         else if (numeri) {
-            for (respuesta=42; respuesta<59; respuesta++) {
+            for (respuesta=40; respuesta<61; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
                     document.getElementById("outputRegleta").value += respuestas[respuesta][1];
                 }
@@ -110,7 +115,7 @@ function enviar() {
                 }
             }
         } else {
-            for (respuesta=1; respuesta<44; respuesta++) {
+            for (respuesta=1; respuesta<46; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
                     document.getElementById("outputRegleta").value += respuestas[respuesta][1];
                 }
@@ -141,6 +146,8 @@ function desmarcar() {
         9:[0,0,0,0,0,0],10:[0,0,0,0,0,0],11:[0,0,0,0,0,0],12:[0,0,0,0,0,0],
        13:[0,0,0,0,0,0],14:[0,0,0,0,0,0],15:[0,0,0,0,0,0],16:[0,0,0,0,0,0]
     }
+    numeri = false;
+    mayus = false;
 }
 function limpiar() {
     document.getElementById("outputRegleta").value = ""

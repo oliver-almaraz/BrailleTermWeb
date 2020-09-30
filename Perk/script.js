@@ -24,11 +24,7 @@ const nums = [
 	"⠁","⠃","⠉","⠙","⠑","⠋","⠛","⠓","⠊","⠚",
 	"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
 ];
-const diacríticos = [
-  "á", "é", "í", "ó", "ú", "ü", "ñ",
-  "Á", "É", "Í", "Ó", "Ú", "Ü", "Ñ"
-];
-const primeras5letras = ["a","b","c", "d", "e", "f", "g", "h", "i"];
+const primeras10letras = ["a","b","c", "d", "e", "f", "g", "h", "i","j"];
 var MAYUS = false;
 var NUMERAL = false;
 
@@ -76,21 +72,11 @@ function convertir(input) {
 					NUMERAL = 0;
 				}
 				 else if (MAYUS) {
-					// Primero ver si es diacrítico
-					for (var j=0; j<7; j++) {
-						if (alpha[i] == diacríticos[j]) {
-							texto.value += diacríticos[j+7];
-							MAYUS = 0;
-              NUMERAL = 0;
-              return 0;
-						}
-					}
-					// Si no...
 					texto.value += alpha[i].toUpperCase();
 					MAYUS = 0;
 					NUMERAL = 0;
         }
-				 else if (NUMERAL && primeras5letras.indexOf(alpha[i]) > -1) { // Si NUMERAL está activado y la letra está en el rango a-j
+				 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) > -1) { // Si NUMERAL está activado y la letra está en el rango a-j
 				 	for (var j=0; j<10; j++) {
 					 	if (nums[j] == braille[i]) {
 							texto.value += nums[j+10];
@@ -99,7 +85,7 @@ function convertir(input) {
 						}
 					}
 				} 
-				 else if (NUMERAL && primeras5letras.indexOf(alpha[i]) == -1) { // Si NUMERAL y se escribe una letra minus. fuera del rango a-j
+				 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) == -1) { // Si NUMERAL y se escribe una letra minus. fuera del rango a-j
 					NUMERAL=0;
 					texto.value += alpha[i];
 				}
