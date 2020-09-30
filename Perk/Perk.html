@@ -3,7 +3,7 @@
     <head>
         <title>BrailleTerm Web</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         
         <meta property="og:title" content="BrailleTerm Web">
         <meta property="og:image" content="../PagePreview.png">
@@ -47,11 +47,16 @@
                 <textarea name="outputBraille" id="outputBraille" placeholder="Los signos braille se mostrarán aquí..." cols="27" rows="10"></textarea>
                 <textarea name="outputTexto" id="outputTexto" placeholder="y su equivalente en español acá." cols="27" rows="10"></textarea>
             </p>
-            <br/> <br/> <br/>
+            <br/>
+            <br/>
             <label><em>Escribe aquí la combinación de puntos <br> y presiona 'enter' para enviar:</em></label>
             <p><input type="text" id="input" autofocus placeholder="fdsjkl"></p>
+
             <p><input id="enviar" type="Submit" onclick="convertir(document.getElementById('input').value);" value="Enviar"></p>
-            <p><input id="borrarTodo" type="Submit" onclick="borrarTodo()" value="Borrar todo"></p>
+            <p><input type="submit" value="Salto de línea" onclick="salto();">
+                <input type="submit" value="Tabulación"onclick="tab();">
+            </p>
+            <p><input id="borrarTodo" type="reset" onclick="borrarTodo()" value="Borrar todo"></p>
 
             <script src="script.js"></script>
         <hr>

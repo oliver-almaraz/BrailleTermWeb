@@ -94,7 +94,16 @@ function convertir(input) {
 				}
 			}
 		}
-}
+};
+
+function salto() {
+	document.getElementById("outputBraille").value += "\n";
+	document.getElementById("outputTexto").value += "\n";
+};
+function tab() {
+	document.getElementById("outputBraille").value += "\t";
+	document.getElementById("outputTexto").value += "\t";
+};
 
 function borrarTodo() {
 	document.getElementById("input").value = "";
