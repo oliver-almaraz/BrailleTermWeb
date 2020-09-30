@@ -41,59 +41,63 @@ function convertir(input) {
         textoBrai.value += braille[0];
         texto.value +=  " ";
 		NUMERAL = false;
+		document.getElementById("input").value = "";
 		return 0;
     }
      else if (input == "jl") { // Signo de mayúscula
 			MAYUS = true;
 			NUMERAL = false;
-      textoBrai.value += braille[40];
-      return 0;
+			textoBrai.value += braille[40];
+			document.getElementById("input").value = "";
+      		return 0;
     }
      else if (input == "jkls") { // Numeral
 			NUMERAL = true;
 			MAYUS = false; // Previene un error del usuario
-      textoBrai.value += braille[60];
-      return 0;
+			textoBrai.value += braille[60];
+			document.getElementById("input").value = "";
+    		return 0;
     }
     // else...
     /***********************************
-		 * SI ES UNA LETRA O NÚMERO BRAILLE
-		************************************/
+	 * SI ES UNA LETRA O NÚMERO BRAILLE
+	************************************/
 
-		for (var i = 0; i <= 64; i++) {
-			if (input == perk[i]) {
-				// Se añade el signo braille a textoBrai
-				textoBrai.value += braille[i];
+	for (var i = 0; i <= 64; i++) {
+		if (input == perk[i]) {
+			// Se añade el signo braille a textoBrai
+			textoBrai.value += braille[i];
 
-				// Y se añade el signo del alfabeto a 'OutputTexto':
+			// Y se añade el signo del alfabeto a 'OutputTexto':
 
-				// Si es el punto 5 seguido de números
-				if (NUMERAL && i == 16) {
-					NUMERAL = 0;
-				}
-				 else if (MAYUS) {
-					texto.value += alpha[i].toUpperCase();
-					MAYUS = 0;
-					NUMERAL = 0;
-        }
-				 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) > -1) { // Si NUMERAL está activado y la letra está en el rango a-j
-				 	for (var j=0; j<10; j++) {
-					 	if (nums[j] == braille[i]) {
-							texto.value += nums[j+10];
-							return 0;
-							// Ya se había desactivado NUMERAL con el punto 5
-						}
+			// Si es el punto 5 seguido de números
+			if (NUMERAL && i == 16) {
+				NUMERAL = 0;
+			}
+			 else if (MAYUS) {
+				texto.value += alpha[i].toUpperCase();
+				MAYUS = 0;
+				NUMERAL = 0;
+			}
+			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) > -1) { // Si NUMERAL está activado y la letra está en el rango a-j
+				for (var j=0; j<10; j++) {
+					if (nums[j] == braille[i]) {
+						texto.value += nums[j+10];
+						document.getElementById("input").value = "";
+						return 0;
+						// Ya se había desactivado NUMERAL con el punto 5
 					}
-				} 
-				 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) == -1) { // Si NUMERAL y se escribe una letra minus. fuera del rango a-j
-					NUMERAL=0;
-					texto.value += alpha[i];
 				}
-				 else {
-					texto.value += alpha[i];
-				}
+			} 
+			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) == -1) { // Si NUMERAL y se escribe una letra minus. fuera del rango a-j
+				NUMERAL=0;
+				texto.value += alpha[i];
+			}
+			 else {
+				texto.value += alpha[i];
 			}
 		}
+	}
 };
 
 function salto() {
@@ -114,7 +118,6 @@ function borrarTodo() {
 document.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     convertir(document.getElementById("input").value);
-    document.getElementById("input").value = "";
   }
 });
 
