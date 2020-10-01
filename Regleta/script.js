@@ -82,47 +82,52 @@ var cajetines = {  //Lista que los checkboxes modifican
 function enviar() {
     var mayus = false;
     var numeri = false;
+    var outputRegleta = document.getElementById("outputRegleta");
 
     for (var cajetin=1; cajetin<17; cajetin++) {
         //Para cada cajetín
         if (JSON.stringify(cajetines[cajetin])==="[0,0,0,0,0,0]") { // Cajetín vacío = espacio
-            document.getElementById("outputRegleta").value += "\ ";
+            outputRegleta.value += "\ ";
             mayus = false;
             numeri = false;
+            continue;
         } else if (JSON.stringify(cajetines[cajetin])==="[0,0,1,1,1,1]") { // Numeral
             numeri = true;
             mayus = false;
+            continue;
         } else if (JSON.stringify(cajetines[cajetin])==="[0,0,0,1,0,1]") { //Mayus
             mayus = true;
             numeri = false;
+            continue;
         } else if (JSON.stringify(cajetines[cajetin])==="[0,0,0,0,1,0]" &&
                     numeri) { //Separador de nums y letras
             numeri =false;
+            continue;
         }
         // Loops últimas opciones por eficiencia
-        else if (numeri) {
+         else if (numeri) {
             for (respuesta=40; respuesta<61; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
-                    document.getElementById("outputRegleta").value += respuestas[respuesta][1];
+                    outputRegleta.value += respuestas[respuesta][1];
                 }
             }
         } else if (mayus) {
             for (respuesta=1; respuesta<34; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
                     var str = respuestas[respuesta][1];
-                    document.getElementById("outputRegleta").value += str.toUpperCase();
+                    outputRegleta.value += str.toUpperCase();
                     mayus = false;
                 }
             }
         } else {
             for (respuesta=1; respuesta<46; respuesta++) {
-                if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
-                    document.getElementById("outputRegleta").value += respuestas[respuesta][1];
+                if (JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
+                    outputRegleta.value += respuestas[respuesta][1];
                 }
             }
         }
     }
-    document.getElementById("outputRegleta").value += "\n";
+    outputRegleta.value += "\n";
     document.getElementById("mensaje").innerHTML = "";
 }
 function cb(cajetin, punto) {
@@ -150,7 +155,7 @@ function desmarcar() {
     mayus = false;
 }
 function limpiar() {
-    document.getElementById("outputRegleta").value = ""
+    document.getElementById("outputRegleta").value = "";
 }
 
 function desactivarCSS() {

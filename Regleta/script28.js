@@ -83,44 +83,48 @@ var cajetines = {  //Lista que los checkboxes modifican
 function enviar() {
     var mayus = false;
     var numeri = false;
+    var outputRegleta = document.getElementById("outputRegleta28");
 
     for (var cajetin=1; cajetin<29; cajetin++) {
         //Para cada cajetín
         if (JSON.stringify(cajetines[cajetin])==="[0,0,0,0,0,0]") { // Cajetín vacío = espacio
-            document.getElementById("outputRegleta28").value += "\ ";
+            outputRegleta.value += "\ ";
             mayus = false;
             numeri = false;
+            continue;
         } else if (JSON.stringify(cajetines[cajetin])==="[0,0,1,1,1,1]") { // Numeral
             numeri = true;
             mayus = false;
+            continue;
         } else if (JSON.stringify(cajetines[cajetin])==="[0,0,0,1,0,1]") { //Mayus
             mayus = true;
             numeri = false;
+            continue;
         } 
         // Loops últimas opciones por eficiencia
-        else if (numeri) {
+         else if (numeri) {
             for (respuesta=42; respuesta<59; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
-                    document.getElementById("outputRegleta28").value += respuestas[respuesta][1];
+                    outputRegleta.value += respuestas[respuesta][1];
                 }
             }
         } else if (mayus) {
             for (respuesta=1; respuesta<34; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
                     var str = respuestas[respuesta][1];
-                    document.getElementById("outputRegleta28").value += str.toUpperCase();
+                    outputRegleta.value += str.toUpperCase();
                     mayus = false;
                 }
             }
         } else {
             for (respuesta=1; respuesta<44; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
-                    document.getElementById("outputRegleta28").value += respuestas[respuesta][1];
+                    outputRegleta.value += respuestas[respuesta][1];
                 }
             }
         }
     }
-    document.getElementById("outputRegleta28").value += "\n";
+    outputRegleta.value += "\n";
     document.getElementById("mensaje").innerHTML = "";
 }
 function cb(cajetin, punto) {
@@ -149,7 +153,7 @@ function desmarcar() {
     }
 }
 function limpiar() {
-    document.getElementById("outputRegleta28").value = ""
+    document.getElementById("outputRegleta28").value = "";
 }
 
 function desactivarCSS() {
