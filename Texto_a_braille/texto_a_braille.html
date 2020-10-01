@@ -24,8 +24,9 @@
                     <a href="../index.html">Leer braille</a>
                     <a href="../Escribir/Escribir.html">Escribir braille</a>
                     <a href="../Regleta/Regleta.html">Regleta virtual</a>
-                    <a class="active">Máquina 'Parkins'</a>
-                    <a href="../Texto_a_braille/texto_a_braille.html">Texto a braille</a>
+                    <a href="../Perk/Perk.html">Máquina 'Parkins'</a>
+                    <a class="active">Texto a braille</a>
+
                 </div>  
             </div>
             <div class="dropdownNav">
@@ -40,34 +41,27 @@
 
 
         <h1>BrailleTerm</h1>
-        <h3>Escribe signos braille utilizando seis teclas de tu teclado Qwerty:<br/> <em>(F = punto 1, D=2, S=3 J=4, K=5, L=6)</em>
-        </h3>
 
         <hr>
             
-            <p><textarea name="outputBraille" id="outputBraille" placeholder="Los signos braille se mostrarán aquí..." rows="4"></textarea></p>
-            <p><textarea name="outputTexto" id="outputTexto" placeholder="y su equivalente en español acá." rows="4"></textarea></p>
+            <p><textarea id="input" placeholder="Escribe o pega texto aquí..." rows="4"></textarea></p>
+            <p><textarea id="output" placeholder="y los signos braille se mostrarán aquí." rows="4"></textarea></p>
             
             <br/>
             <br/>
-            <label><em>Escribe aquí la combinación de puntos <br> y presiona 'enter' para enviar:</em></label>
-            <p><input type="text" id="input" autofocus placeholder="fdsjkl"></p>
 
-            <p><input id="enviar" type="Submit" onclick="convertir(document.getElementById('input').value);" value="Enviar"></p>
-            <p><input type="submit" value="Salto de línea" onclick="salto();">
-                <input type="submit" value="Tabulación"onclick="tab();">
-            </p>
+            <p><input id="enviar" type="Submit" onclick="convertir(document.getElementById('input').value);" value="Convertir"></p>
             <p><input id="borrarTodo" type="reset" onclick="borrarTodo()" value="Borrar todo"></p>
 
             <script src="script.js"></script>
         <hr>
 
-        <p><a href="mailto:oliver.almaraz@gmail.com"
-            title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
-        <p><a href="https://github.com/oliver-almaraz/Parkins/" title="Aplicación para escritorio"
-            target="_blank">Aplicación para escritorio (Linux)</a></p>
+        <p><a href="https://github.com/oliver-almaraz/Texto_a_Braille" title="Aplicación para escritorio"
+            target="_blank"><em>Aplicación para escritorio (Windows y Linux)</em></a></p>
         <p><a id="pie" href="https://es.wikipedia.org/wiki/Software_libre" title="Software libre"
             target="_blank">Esta aplicación web es libre y de código abierto,<br/>así como el software utilizado para crearla.</a></p>
+            <p><a href="mailto:oliver.almaraz@gmail.com"
+                title="Eviar un email al creador de este juego" target="_blank">Contacto</a></p>
 
 </body>
 </html>
