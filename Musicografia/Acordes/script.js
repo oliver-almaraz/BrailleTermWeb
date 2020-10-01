@@ -110,9 +110,9 @@ alert("Para la mano derecha, anota los intervalos con respecto a la nota superio
 );
 
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) /*Enter*/{
+    if (event.key === 'Enter') {
         evaluar();
-    } else if (event.keyCode === 83 /*s*/) {
+    } else if (event.key.toLowerCase() === 's') {
         // La tecla "s" activa "siguiente"
         siguiente();
     }

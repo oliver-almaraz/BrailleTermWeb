@@ -142,9 +142,9 @@ document.getElementById("veredictoOctava").innerHTML = "Cuando tu resultado sea 
 document.getElementById("veredictoNota").innerHTML = "Si la nota no tiene ninguna alteración, deja el primer cajetín vacío."
 
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) /*Enter*/{
+    if (event.key === 'Enter') {
         evaluar();
-    } else if (event.keyCode === 83 /*s*/) {
+    } else if (event.key.toLowerCase() === 's') {
         // La tecla "s" activa "siguiente"
         siguiente();
     }

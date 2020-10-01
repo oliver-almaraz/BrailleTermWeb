@@ -122,10 +122,10 @@ resetear() //Por si el navegador guardó la última jugada
 siguiente()
 // Al presionar enter después de escribir en la casilla de input se activa 'evaluar()'.
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
         evaluar();
-    } else if (event.keyCode === 59 /*ñ*/ || event.keyCode === 188 /*,*/) {
-        // La tecla "ñ" o "," activa "siguiente()"
+    } else if (event.key.toLowerCase() === 'ñ') {
+        // La tecla "ñ" activa "siguiente()"
         siguiente();
     }
 });

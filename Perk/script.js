@@ -112,7 +112,7 @@ function borrarTodo() {
 };
 
 document.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
+  if (event.key === 'Enter') {
     convertir(document.getElementById("input").value);
   }
 });

@@ -164,7 +164,7 @@ function desactivarCSS() {
 
 // Al presionar enter después de escribir en la casilla de input se activa "enviar()".
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
         enviar();
     }
 });

@@ -112,7 +112,7 @@ function desactivarCSS() {
 // Al presionar enter después de escribir en la casilla de input se activa el botón 'Evaluar'.
 var inputField = document.getElementById("respuesta");
 inputField.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
         document.getElementById("evaluar").click();
     }
 });

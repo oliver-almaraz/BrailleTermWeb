@@ -104,16 +104,16 @@ siguiente()
 /* Al presionar 'enter' después de escribir en la casilla de input se activa el botón 'Evaluar',
    y al presionar "a" se reproduce el audio */
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
         evaluar();
-    } else if (event.keyCode === 65 /*a*/ || event.keyCode === 190 /*.*/) {
-        // Se eliminan las "a" y "." de la casilla de input.
+    } else if (event.key.toLowerCase() === 'a' /*a*/) {
+        // Se elimina la "a" de la casilla de input.
         var respuestaInput= document.getElementById("respuesta").value;
-        document.getElementById("respuesta").value = respuestaInput.replace(/a|\./gi, '');
+        document.getElementById("respuesta").value = respuestaInput.replace(/a|A/gi, '');
         // Y luego se reproduce el audio
         document.getElementById("audio").play();
-    } else if (event.keyCode === 59 /*ñ*/ || event.keyCode === 188 /*,*/) {
-        // La tecla "ñ" o "," activa "siguiente"
+    } else if (event.key.toLowerCase() === "ñ") {
+        // La tecla "ñ" activa "siguiente"
         siguiente();
     }
 });
