@@ -119,8 +119,7 @@ function ayuda() {
 		"'K', y 'L' representan los puntos 4, 5 y 6 respectivamente.\nPara escribir, por ejemplo, la letra 's', "+
 		"deberás presionar las teclas 'D', 'S' y 'J' al mismo tiempo y luego presionar 'Enter' para enviar.\n"+
 		"También puedes ingresar caracteres 'especiales', como el signo numeral y de mayúsculas. Para ingresar "+
-		"un espacio presiona la barra espaciadora y luego enter.\n"+
-		"Nota: es posible que algunos teclados no sean compatibes con esta aplicación."
+		"un espacio presiona la barra espaciadora y luego 'enter'."
 	);
 }
 
