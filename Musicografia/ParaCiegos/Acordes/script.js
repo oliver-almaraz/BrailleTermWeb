@@ -106,14 +106,14 @@ siguiente()
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
         evaluar();
-    } else if (event.key.toLowerCase() === 'a' /*a*/) {
-        // Se elimina la "a" de la casilla de input.
+    } else if (event.key === ',' /*a*/) {
+        // Se elimina la coma de la casilla de input.
         var respuestaInput= document.getElementById("respuesta").value;
-        document.getElementById("respuesta").value = respuestaInput.replace(/a|A/gi, '');
+        document.getElementById("respuesta").value = respuestaInput.replace(/,/g, '');
         // Y luego se reproduce el audio
         document.getElementById("audio").play();
-    } else if (event.key.toLowerCase() === "ñ") {
-        // La tecla "ñ" activa "siguiente"
+    } else if (event.key === ".") {
+        // La tecla "." activa "siguiente"
         siguiente();
     }
 });

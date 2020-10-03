@@ -124,8 +124,8 @@ siguiente()
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
         evaluar();
-    } else if (event.key.toLowerCase() === 'ñ') {
-        // La tecla "ñ" activa "siguiente()"
+    } else if (event.key === '.') {
+        // La tecla "." activa "siguiente()"
         siguiente();
     }
 });

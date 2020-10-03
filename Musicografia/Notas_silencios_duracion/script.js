@@ -95,7 +95,7 @@ function siguiente() {
 resetear() //Por si el navegador guardó la última jugada
 siguiente()
 document.getElementById("veredicto").innerHTML = "Escribe el signo braille correcto para cada nota, luego presiona <em>Evaluar</em> o 'Enter'.\
-    <br/>Para mostrar una nueva letra presiona <em>Siguiente</em> o 's'."
+    <br/>Para mostrar una nueva letra presiona <em>Siguiente</em> o la lecla para punto ' <em>.</em> '"
 
 function desactivarCSS() {
     for ( i=0; i<document.styleSheets.length; i++) {
@@ -106,8 +106,8 @@ function desactivarCSS() {
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
         evaluar();
-    } else if (event.key.toLowerCase() === 's') {
-        // La tecla "s" activa "siguiente"
+    } else if (event.key === '.') {
+        // La tecla "." activa "siguiente"
         siguiente();
     }
 });

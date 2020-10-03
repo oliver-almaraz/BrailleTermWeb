@@ -177,8 +177,8 @@ function desactivarCSS() {
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
         evaluar();
-    } else if (event.key.toLowerCase() === 's') {
-        // La tecla "s" activa "siguiente"
+    } else if (event.key === '.') {
+        // La tecla "." activa "siguiente"
         siguiente();
     }
 });

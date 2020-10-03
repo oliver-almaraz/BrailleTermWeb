@@ -138,14 +138,14 @@ function siguiente() {
 resetear() //Por si el navegador guardó la última jugada
 siguiente()
 document.getElementById("veredictoAlteracion").innerHTML = "Escribe el signo braille correcto para cada nota, luego presiona <em>Evaluar</em> o 'Enter'."
-document.getElementById("veredictoOctava").innerHTML = "Cuando tu resultado sea correcto, presiona <em>Siguiente</em> o 's' para mostrar una nueva nota."
+document.getElementById("veredictoOctava").innerHTML = "Cuando tu resultado sea correcto, presiona <em>Siguiente</em> o la tecla para punto ' <em>.</em> ' para mostrar una nueva nota."
 document.getElementById("veredictoNota").innerHTML = "Si la nota no tiene ninguna alteración, deja el primer cajetín vacío."
 
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
         evaluar();
-    } else if (event.key.toLowerCase() === 's') {
-        // La tecla "s" activa "siguiente"
+    } else if (event.key === '.') {
+        // La tecla "." activa "siguiente"
         siguiente();
     }
 });

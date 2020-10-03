@@ -105,15 +105,15 @@ document.getElementById("veredictoIzquierda").innerHTML = "Cuando tu resultado s
 alert("Para la mano derecha, anota los intervalos con respecto a la nota superior de arriba abajo.\
     \nPara la izquierda, anótalos de abajo arriba con respecto a la nota inferior.\
     \nSi hay alteración, esta se escribe antes del intervalo.\
-    \nPuedes presionar 'Enter' para evaluar tu respuesta y 's' para mostrar un nuevo acorde.\
+    \nPuedes presionar 'Enter' para evaluar tu respuesta y la tecla para punto ' . ' para mostrar un nuevo acorde.\
     \n\n(Para más información, hasta abajo en la página puedes encontrar el enlace al manual introductorio a la musicografía braille de la ONCE)"
 );
 
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
         evaluar();
-    } else if (event.key.toLowerCase() === 's') {
-        // La tecla "s" activa "siguiente"
+    } else if (event.key === '.') {
+        // La tecla "." activa "siguiente"
         siguiente();
     }
 });
