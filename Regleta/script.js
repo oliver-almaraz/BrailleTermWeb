@@ -157,6 +157,20 @@ function desmarcar() {
 function limpiar() {
     document.getElementById("outputRegleta").value = "";
 }
+function ayuda() {
+    alert(
+    "La regleta es un instrumento que facilita grabar braille en una hoja de papel gruesa, "+
+    "es una especie de guía para poder crear relieve bien alineado con un punzón sin romper "+
+    "el papel. El detalle es que el relieve se crea presionando el punzón desde "+
+    "la parte trasera de la hoja, es decir, escribes braille en la hoja al revés (de derecha "+
+    "a izquierda) para que pueda ser leído normalmente al voltear la hoja "+
+    "(de izquierda a derecha). ¿Confundido? Toma un papel que tengas a la mano y con un bolígrafo perfora los "+
+    "orificios que corresponden a la palabra 'hola' en braille, al finalizar voltea el papel y lee.\n"+
+    "En fin, para escribir braille usando una regleta debes grabar los puntos DE DERECHA A IZQUIERDA, además de que "+
+    "el órden de los puntos queda así:\n\t\t4 1\n\t\t5 2\n\t\t6 3\n"+
+    "Al principio te costará trabajo hacer la inversión, pero después será tan fácil como leer braille.\n"
+    );
+};
 
 function desactivarCSS() {
     for ( i=0; i<document.styleSheets.length; i++) {

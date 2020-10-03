@@ -111,6 +111,19 @@ function borrarTodo() {
 	document.getElementById("outputTexto").value = "";
 };
 
+function ayuda() {
+	alert(
+		"Utiliza tu teclado Qwerty para ingresar caracteres braille y espacios como si estuvieras usando "+
+		"una máquina de escribir para braille:\nColoca tus dedos índices en las teclas 'J' Y 'F'.\nLa tecla "+
+		"'F' representa al punto braille 1, la 'D' al 2 y la 'S' al 3. De la misma manera, Las teclas 'J', "+
+		"'K', y 'L' representan los puntos 4, 5 y 6 respectivamente.\nPara escribir, por ejemplo, la letra 's', "+
+		"deberás presionar las teclas 'D', 'S' y 'J' al mismo tiempo y luego presionar 'Enter' para enviar.\n"+
+		"También puedes ingresar caracteres 'especiales', como el signo numeral y de mayúsculas. Para ingresar "+
+		"un espacio presiona la barra espaciadora y luego enter.\n"+
+		"Nota: es posible que algunos teclados no sean compatibes con esta aplicación."
+	);
+}
+
 document.addEventListener("keyup", function(event) {
   if (event.key === 'Enter') {
     convertir(document.getElementById("input").value);
