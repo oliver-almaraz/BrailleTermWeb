@@ -117,16 +117,15 @@ function ayuda() {
 		"una máquina de escribir para braille:\nColoca tus dedos índices en las teclas 'J' Y 'F'.\nLa tecla "+
 		"'F' representa al punto braille 1, la 'D' al 2 y la 'S' al 3. De la misma manera, Las teclas 'J', "+
 		"'K', y 'L' representan los puntos 4, 5 y 6 respectivamente.\nPara escribir, por ejemplo, la letra 's', "+
-		"deberás presionar las teclas 'D', 'S' y 'J' al mismo tiempo y luego presionar 'Enter' para enviar.\n"+
+		"deberás presionar las teclas 'D', 'S' y 'J' al mismo tiempo.\n"+
 		"También puedes ingresar caracteres 'especiales', como el signo numeral y de mayúsculas. Para ingresar "+
-		"un espacio presiona la barra espaciadora y luego 'enter'."
+		"un espacio presiona la barra espaciadora."
 	);
 }
 
 document.addEventListener("keyup", function(event) {
-  if (event.key === 'Enter') {
-    convertir(document.getElementById("input").value);
-  }
+	convertir(document.getElementById("input").value);
+	setTimeout(500); // Con el temporizador se evita que se envíe la misma letra por cada keyup
 });
 
 function desactivarCSS() {

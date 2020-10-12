@@ -50,11 +50,12 @@
             
             <br/>
             <br/>
-            <label><em>Escribe aquí la combinación de puntos <br> y presiona 'enter' para enviar:</em></label>
+            <label><em>Escribe aquí la combinación de puntos:</em></label>
             <p><input type="text" id="input" autofocus placeholder="fdsjkl"></p>
 
             <p><input id="enviar" type="Submit" onclick="convertir(document.getElementById('input').value);" value="Enviar"></p>
-            <p><input type="submit" value="Salto de línea" onclick="salto();">
+            <p>
+                <input type="submit" value="Salto de línea" onclick="salto();">
                 <input type="submit" value="Tabulación"onclick="tab();">
             </p>
             <p><input id="borrarTodo" type="reset" onclick="borrarTodo()" value="Borrar todo"></p>

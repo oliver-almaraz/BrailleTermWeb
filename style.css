@@ -317,8 +317,3 @@ tenga el formato de la página y no del navegador
     color: #489aba;
     text-align: center;
 }
-:-ms-input-placeholder, /* Internet Explorer 10-11 */
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #489aba;
-    text-align: center;
-}
