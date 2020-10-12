@@ -12,8 +12,8 @@ const perk = [ // Equivalentes en combinación Perkins (f=punto 1, d=2, s=3, j=4
 	"l",  "fl",  "dl",  "dfl",  "ls",  "fls",  "dls",  "dfls",  "jl",  "fjl",  "djl",  "dfjl",  "jls",  "fjls",  "djls",  "dfjls",
 	"kl", "fkl", "dkl", "dfkl", "kls", "fkls", "dkls", "dfkls", "jkl", "fjkl", "djkl", "dfjkl", "jkls", "fjkls", "djkls", "dfjkls"
 ];
-const alpha = [ // Las letras que corresponden a un solo signo. Signos poco comunes,
-// inexistentes en español, o que requieren más de un signo para interpretarse se ignoran ("�").
+const alpha = [ /* Las letras que corresponden a un solo signo. Signos poco comunes,
+ inexistentes en español, o que requieren más de un signo para interpretarse se ignoran ("�"). */
 	   		" ", "a", ",", "b", ".", "k",  ";",  "l", "�",  "c", "i", "f", "í", "m",  "s", "p",
 			"@", "e", ":", "h", "*", "o",  "!",  "r", "�",  "d", "j", "g", ")", "n",  "t", "q",
 			"�", "�", "?", "(", "-", "u",  "\"", "v", "�",  "�", "�", "�", "ó", "x",  "é", "�",
@@ -25,6 +25,7 @@ const nums = [
 	"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
 ];
 const primeras10letras = ["a","b","c", "d", "e", "f", "g", "h", "i","j"];
+const letrasPuntos = ['f','d','s','j','k','l',' '];
 var MAYUS = false;
 var NUMERAL = false;
 
@@ -35,6 +36,7 @@ function convertir(input) {
     // Se ordena el input alfabéticamente y se pasa a lowercase:
 	input = input.split('').sort().join('').toLowerCase();
 	document.getElementById("input").value = "";
+	document.getElementById("input").focus();
 
     // Los espacios pasan tal cual
     if (input == " ") {
@@ -99,16 +101,19 @@ function convertir(input) {
 function salto() {
 	document.getElementById("outputBraille").value += "\n";
 	document.getElementById("outputTexto").value += "\n";
+	document.getElementById("input").focus();
 };
 function tab() {
 	document.getElementById("outputBraille").value += "\t";
 	document.getElementById("outputTexto").value += "\t";
+	document.getElementById("input").focus();
 };
 
 function borrarTodo() {
 	document.getElementById("input").value = "";
 	document.getElementById("outputBraille").value = "";
 	document.getElementById("outputTexto").value = "";
+	document.getElementById("input").focus();
 };
 
 function ayuda() {
@@ -119,14 +124,33 @@ function ayuda() {
 		"'K', y 'L' representan los puntos 4, 5 y 6 respectivamente.\nPara escribir, por ejemplo, la letra 's', "+
 		"deberás presionar las teclas 'D', 'S' y 'J' al mismo tiempo.\n"+
 		"También puedes ingresar caracteres 'especiales', como el signo numeral y de mayúsculas. Para ingresar "+
-		"un espacio presiona la barra espaciadora."
+		"un espacio presiona la barra espaciadora.\n"+
+		"Si estás utilizando un dispositivo con pantalla táctil, presiona el botón 'Para pantalla táctil' "+
+		"para desactivar el envío automático."
 	);
 }
 
-document.addEventListener("keyup", function(event) {
-	convertir(document.getElementById("input").value);
-	setTimeout(500); // Con el temporizador se evita que se envíe la misma letra por cada keyup
+document.addEventListener("keyup", leer = function(event) {
+	// Acción automática
+	if (letrasPuntos.indexOf(event.key) > -1) { // Si es una de las letras que equivalen a puntos
+		convertir(document.getElementById("input").value);
+		setTimeout(500); // Con el temporizador se evita que se envíe la misma letra por cada keyup
+	}
 });
+
+function desactivarEnvioAuto() {
+	// Para pantallas táctiles o teclados incompatibles
+	document.getElementById("enviar").value = "Enviar";
+	document.getElementById("escribeAqui").innerHTML = "<em>Escribe aquí la combinación de puntos<br>y presiona 'Enviar' o enter:</em>";
+	document.getElementById("enviar").onclick = function() {convertir(document.getElementById('input').value);}
+	document.removeEventListener("keyup", leer);
+	document.getElementById("input").focus();
+	document.addEventListener("keyup", function(event) {
+		if (event.key === 'Enter')
+			convertir(document.getElementById("input").value);
+	});
+
+};
 
 function desactivarCSS() {
     for ( i=0; i<document.styleSheets.length; i++) {

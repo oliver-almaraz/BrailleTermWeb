@@ -50,10 +50,11 @@
             
             <br/>
             <br/>
-            <label><em>Escribe aquí la combinación de puntos:</em></label>
+            <label id="escribeAqui"><em>Escribe aquí la combinación de puntos:</em></label>
             <p><input type="text" id="input" autofocus placeholder="fdsjkl"></p>
 
-            <p><input id="enviar" type="Submit" onclick="convertir(document.getElementById('input').value);" value="Enviar"></p>
+            <p>
+                <input id="enviar" type="Submit" onclick="desactivarEnvioAuto();" value="Para pantalla táctil"></p>
             <p>
                 <input type="submit" value="Salto de línea" onclick="salto();">
                 <input type="submit" value="Tabulación"onclick="tab();">
