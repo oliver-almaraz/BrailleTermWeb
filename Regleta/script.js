@@ -54,24 +54,26 @@ const respuestas = {
     44:{1:"@",2:[0,0,0,0,1,0]},
     45:{1:"|",2:[0,0,0,1,1,1]},
 
-    // Números
-    46:{1:"0",2:[0,1,0,1,1,0]},
-    47:{1:"1",2:[1,0,0,0,0,0]},
-    48:{1:"2",2:[1,1,0,0,0,0]},
-    49:{1:"3",2:[1,0,0,1,0,0]},
-    50:{1:"4",2:[1,0,0,1,1,0]},
-    51:{1:"5",2:[1,0,0,0,1,0]},
-    52:{1:"6",2:[1,1,0,1,0,0]},
-    53:{1:"7",2:[1,1,0,1,1,0]},
-    54:{1:"8",2:[1,1,0,0,1,0]},
-    55:{1:"9",2:[0,1,0,1,0,0]},
-
     // Signos matemáticos
-    56:{1:"+",2:[0,1,1,0,1,0]},
-    57:{1:"-",2:[0,0,1,0,0,1]},
-    58:{1:"x",2:[0,1,1,0,0,1]},
-    59:{1:"=",2:[0,1,1,0,1,1]},
-    60:{1:"/",2:[0,1,0,0,1,1]}
+    46:{1:"+",2:[0,1,1,0,1,0]},
+    47:{1:"-",2:[0,0,1,0,0,1]},
+    48:{1:"x",2:[0,1,1,0,0,1]},
+    49:{1:"=",2:[0,1,1,0,1,1]},
+    50:{1:"/",2:[0,1,0,0,1,1]},
+
+    // Números
+    51:{1:"0",2:[0,1,0,1,1,0]},
+    52:{1:"1",2:[1,0,0,0,0,0]},
+    53:{1:"2",2:[1,1,0,0,0,0]},
+    54:{1:"3",2:[1,0,0,1,0,0]},
+    55:{1:"4",2:[1,0,0,1,1,0]},
+    56:{1:"5",2:[1,0,0,0,1,0]},
+    57:{1:"6",2:[1,1,0,1,0,0]},
+    58:{1:"7",2:[1,1,0,1,1,0]},
+    59:{1:"8",2:[1,1,0,0,1,0]},
+    60:{1:"9",2:[0,1,0,1,0,0]},
+
+    
 }
 var cajetines = {  //Lista que los checkboxes modifican
     1:[0,0,0,0,0,0], 2:[0,0,0,0,0,0], 3:[0,0,0,0,0,0], 4:[0,0,0,0,0,0],
@@ -106,9 +108,16 @@ function enviar() {
         }
         // Loops últimas opciones por eficiencia
          else if (numeri) {
-            for (respuesta=40; respuesta<61; respuesta++) {
+            for (respuesta=51; respuesta<61; respuesta++) {
                 if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
                     outputRegleta.value += respuestas[respuesta][1];
+                }
+            }
+            for (respuesta=46; respuesta<51; respuesta++) {
+                // Si es un signo de punt. matemát. se escribe y se desactiva "numeri"
+                if(JSON.stringify(respuestas[respuesta][2])===JSON.stringify(cajetines[cajetin])) {
+                    outputRegleta.value += respuestas[respuesta][1];
+                    numeri = false;
                 }
             }
         } else if (mayus) {

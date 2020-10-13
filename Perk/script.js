@@ -19,6 +19,12 @@ const alpha = [ /* Las letras que corresponden a un solo signo. Signos poco comu
 			"�", "�", "?", "(", "-", "u",  "\"", "v", "�",  "�", "�", "�", "ó", "x",  "é", "�",
 			"�", "�", "�", "ü", "�", "z",  "=",  "á", "|",  "�", "w", "ñ", "�", "y",  "ú", "�"
 ];
+const signosPuntNumer = [
+	"+", "-", "*", "/", "="
+]
+const signosPuntNumerBrai = [
+	"⠖", "⠤", "⠦", "⠴", "⠶"
+]
 const nums = [
   // a	b	c	d	 e	  f		g	h	  i	   j
 	"⠁","⠃","⠉","⠙","⠑","⠋","⠛","⠓","⠊","⠚",
@@ -78,15 +84,26 @@ function convertir(input) {
 				MAYUS = 0;
 				NUMERAL = 0;
 			}	
-			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) > -1) { // Si NUMERAL está activado y la letra está en el rango a-j
+			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) > -1) {
+				// Si NUMERAL está activado y la letra está en el rango a-j
+				// se escribe un número
 				for (var j=0; j<10; j++) {
 					if (nums[j] == braille[i]) {
 						texto.value += nums[j+10];
 						return 0;
-						// Ya se había desactivado NUMERAL con el punto 5
 					}
 				}
 			} 
+			 else if (NUMERAL && (signosPuntNumerBrai.indexOf(braille[i]) > -1) ) {
+				// Si está activado numeral y se escribió un signo de punt. matemático
+				for (var j=0; j<5; j++) {
+					if (signosPuntNumerBrai[j] === braille[i]) {
+						texto.value += signosPuntNumer[j];
+						NUMERAL = false;
+						return 0;
+					}
+				}
+			}
 			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) == -1) { // Si NUMERAL y se escribe una letra minus. fuera del rango a-j
 				NUMERAL=0;
 				texto.value += alpha[i];
@@ -102,11 +119,13 @@ function salto() {
 	document.getElementById("outputBraille").value += "\n";
 	document.getElementById("outputTexto").value += "\n";
 	document.getElementById("input").focus();
+	NUMERAL = false;
 };
 function tab() {
 	document.getElementById("outputBraille").value += "\t";
 	document.getElementById("outputTexto").value += "\t";
 	document.getElementById("input").focus();
+	NUMERAL = false;
 };
 
 function borrarTodo() {
@@ -114,6 +133,8 @@ function borrarTodo() {
 	document.getElementById("outputBraille").value = "";
 	document.getElementById("outputTexto").value = "";
 	document.getElementById("input").focus();
+	MAYUS = false;
+	NUMERAL = false;
 };
 
 function ayuda() {
