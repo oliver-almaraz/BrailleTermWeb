@@ -19,6 +19,10 @@ Panel navegación superior
     background-image: url("background2.png");
     overflow: hidden;
 }
+#foroActive {
+    color: #B882F9;
+    text-shadow: 0.5px 0.5px 15px #6F05F0;
+}
 #about {float: right;}
 /* Elementos de la navbar */
 .navbar a {
