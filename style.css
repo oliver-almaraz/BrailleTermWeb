@@ -1,9 +1,5 @@
 #NoCSS {
-    background-color: #04050a00;
-    border-color: #00ccff00;
-    color: #00ccff00;
-    margin: auto;
-    position: fixed;
+    display: none;
 }
 
 /************************
