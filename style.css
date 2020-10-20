@@ -1,3 +1,6 @@
+/*
+Botón oculto vualmente para desactivar las hojas de estilo
+*/
 #NoCSS {
     /* No se debe poner display:hide para que el lector de pantalla lo lea*/
     width: 0px;
