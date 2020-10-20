@@ -88,4 +88,24 @@ function desactivarCSS() {
     }
 };
 
+function guardarTxt() {
+    // Guarda el output como documento de texto para descargar
+
+    let textToSave = document.getElementById('output').value;
+
+    if (textToSave.length <1) {
+        alert("No has ingresado texto aún");
+        return 1;
+    }  
+
+    let documento = document.createElement('a');
+    let creditos = "\n\nGracias por utilizar BrailleTermWeb, una aplicación gratuita y de código abierto.";
+    textToSave += creditos;
+  
+    documento.href = 'data:attachment/text,' + encodeURI(textToSave);
+    documento.target = '_blank';
+    documento.download = 'Texto_a_Braille.txt';
+    documento.click();
+};
+
 borrarTodo();

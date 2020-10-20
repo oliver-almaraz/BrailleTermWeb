@@ -128,6 +128,34 @@ function tab() {
 	NUMERAL = false;
 };
 
+function borrarUna() {
+	// Borra el último elemento de ambas partes
+
+	let outputBraille = document.getElementById("outputBraille").value;
+	let outputTexto = document.getElementById("outputTexto").value;
+	document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+	document.getElementById("outputTexto").value = outputTexto.substring(0, outputTexto.length - 1);
+
+	outputBraille = document.getElementById("outputBraille").value;
+	outputTexto = document.getElementById("outputTexto").value;
+
+	if (outputBraille[outputBraille.length -1] === "⠨" ||
+		outputBraille[outputBraille.length -1] === "⠼") {
+		// Si después de borrar el último caracter braille quedó un s. numeral o de mayus:
+			document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+			NUMERAL = false;
+			// Mayus no se desactiva porque solo dura una letra.
+	} else if (outputBraille[outputBraille.length -1] === "⠐" &&
+				outputTexto[outputTexto.length -1] != "@") {
+				// Si es queda al final el punto 5 como separador de letras y nums.
+			document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+			NUMERAL = true;
+
+	}
+
+	document.getElementById("input").focus();
+};
+
 function borrarTodo() {
 	document.getElementById("input").value = "";
 	document.getElementById("outputBraille").value = "";
@@ -135,6 +163,29 @@ function borrarTodo() {
 	document.getElementById("input").focus();
 	MAYUS = false;
 	NUMERAL = false;
+};
+
+
+function guardarTxt() {
+    // Guarda el output como documento de texto para descargar
+
+	let textToSave = document.getElementById('outputTexto').value;
+	
+    if (textToSave.length <1) {
+        alert("No has ingresado texto aún");
+        return 1;
+    }  
+	
+	let documento = document.createElement('a');
+	textToSave += "\n\n";
+	textToSave += document.getElementById('outputBraille').value;
+    let creditos = "\n\nGracias por utilizar BrailleTermWeb, una aplicación gratuita y de código abierto.";
+    textToSave += creditos;
+  
+    documento.href = 'data:attachment/text,' + encodeURI(textToSave);
+    documento.target = '_blank';
+    documento.download = 'Parkins.txt';
+    documento.click();
 };
 
 function ayuda() {
@@ -156,6 +207,8 @@ document.addEventListener("keyup", leer = function(event) {
 	if (letrasPuntos.indexOf(event.key) > -1) { // Si es una de las letras que equivalen a puntos
 		convertir(document.getElementById("input").value);
 		setTimeout(500); // Con el temporizador se evita que se envíe la misma letra por cada keyup
+	} else if (event.key === "Backspace") {
+		borrarUna();
 	}
 });
 
