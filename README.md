@@ -1,6 +1,6 @@
 # BrailleTerm Web
 
-Este programa es parte de un proyecto sin fines de lucro, se trata en general de un (https://www.udemy.com/course/braille-espanol/)[curso gratuito] para
+Este programa es parte de un proyecto sin fines de lucro, se trata en general de un [curso gratuito](https://www.udemy.com/course/braille-espanol/) para
 aprender signografía básica del braille en español destinado a usuarios videntes.
 
 
