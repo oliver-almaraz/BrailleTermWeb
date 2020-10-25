@@ -114,13 +114,7 @@ function convertir(input) {
 			}
 		}
 	}
-	// Se muestra en una label si MAYUS o NUMERAL están activados
-	if (MAYUS)
-		document.getElementById("flag").innerHTML = "<strong>MAYUS</strong>";
-	else if (NUMERAL)
-		document.getElementById("flag").innerHTML = "<strong>NUMS</strong>";
-	else
-		document.getElementById("flag").innerHTML = "⠀";
+	actualizarFlag();
 };
 
 function salto() {
@@ -135,6 +129,15 @@ function tab() {
 	document.getElementById("input").focus();
 	NUMERAL = false;
 };
+function actualizarFlag() {
+	// Se muestra en una label si MAYUS o NUMERAL están activados
+	if (MAYUS)
+		document.getElementById("flag").innerHTML = "<strong>MAYUS</strong>";
+	else if (NUMERAL)
+		document.getElementById("flag").innerHTML = "<strong>NUMS</strong>";
+	else
+		document.getElementById("flag").innerHTML = "⠀";
+};
 
 function borrarUna() {
 	// Borra el último elemento de ambas partes
@@ -146,11 +149,13 @@ function borrarUna() {
 		// Signo de mayus últmo en outputBraille
 		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
 		MAYUS = false;
+		actualizarFlag();
 		return;
 	} else if (outputBraille[outputBraille.length -1] === "⠼") {
 		// Signo numeral últmo en outputBraille
 		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
 		NUMERAL = false;
+		actualizarFlag();
 		return;
 	}
 
@@ -161,19 +166,22 @@ function borrarUna() {
 	outputBraille = document.getElementById("outputBraille").value;
 	outputTexto = document.getElementById("outputTexto").value;
 
-	if (outputBraille[outputBraille.length -1] === "⠨" ||
-		outputBraille[outputBraille.length -1] === "⠼") {
-		// Si después de borrar el último caracter braille quedó un s. numeral o de mayus:
+	if (outputBraille[outputBraille.length -1] === "⠼") {
+		// Si después de borrar el último caracter braille quedó un s. numeral:
 			document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
 			NUMERAL = false;
-			// Mayus no se desactiva porque solo dura una letra.
-	} else if (outputBraille[outputBraille.length -1] === "⠐" &&
-				outputTexto[outputTexto.length -1] != "@") {
-				// Si es queda al final el punto 5 como separador de letras y nums.
+	} else if (outputBraille[outputBraille.length -1] === "⠨") {
+		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+		MAYUS = false;
+		if ( ! isNaN(outputTexto[outputTexto.length -1]))
+		// Si tras borrar el signo de mayúscula hay números al final se reactiva NUMERAL
+			NUMERAL = true;
+	} else if (outputBraille[outputBraille.length -1] === "⠐" && outputTexto[outputTexto.length -1] != "@") {
+			// Si es queda al final el punto 5 como separador de letras y nums.
 			document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
 			NUMERAL = true;
-
 	}
+	actualizarFlag();
 };
 
 function borrarTodo() {
