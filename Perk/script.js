@@ -104,7 +104,8 @@ function convertir(input) {
 					}
 				}
 			}
-			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) == -1) { // Si NUMERAL y se escribe una letra minus. fuera del rango a-j
+			 else if (NUMERAL && primeras10letras.indexOf(alpha[i]) == -1) {
+				// Si NUMERAL y se escribe una letra minus. fuera del rango a-j
 				NUMERAL=0;
 				texto.value += alpha[i];
 			}
@@ -113,7 +114,7 @@ function convertir(input) {
 			}
 		}
 	}
-
+	// Se muestra en una label si MAYUS o NUMERAL están activados
 	if (MAYUS)
 		document.getElementById("flag").innerHTML = "<strong>MAYUS</strong>";
 	else if (NUMERAL)
