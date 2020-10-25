@@ -37,7 +37,7 @@ var NUMERAL = false;
 
 function convertir(input) {
     var textoBrai = document.getElementById("outputBraille");
-    var texto = document.getElementById("outputTexto");
+	var texto = document.getElementById("outputTexto");
 
     // Se ordena el input alfabéticamente y se pasa a lowercase:
 	input = input.split('').sort().join('').toLowerCase();
@@ -54,7 +54,7 @@ function convertir(input) {
      else if (input == "jl") { // Signo de mayúscula
 		MAYUS = true;
 		NUMERAL = false;
-      	textoBrai.value += braille[40];
+		textoBrai.value += braille[40];
       	return 0;
     }
      else if (input == "jkls") { // Numeral
@@ -113,6 +113,13 @@ function convertir(input) {
 			}
 		}
 	}
+
+	if (MAYUS)
+		document.getElementById("flag").innerHTML = "<strong>MAYUS</strong>";
+	else if (NUMERAL)
+		document.getElementById("flag").innerHTML = "<strong>NUMS</strong>";
+	else
+		document.getElementById("flag").innerHTML = "⠀";
 };
 
 function salto() {
@@ -133,6 +140,20 @@ function borrarUna() {
 
 	let outputBraille = document.getElementById("outputBraille").value;
 	let outputTexto = document.getElementById("outputTexto").value;
+
+	if (outputBraille[outputBraille.length -1] === "⠨") {
+		// Signo de mayus últmo en outputBraille
+		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+		MAYUS = false;
+		return;
+	} else if (outputBraille[outputBraille.length -1] === "⠼") {
+		// Signo numeral últmo en outputBraille
+		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+		NUMERAL = false;
+		return;
+	}
+
+
 	document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
 	document.getElementById("outputTexto").value = outputTexto.substring(0, outputTexto.length - 1);
 
@@ -152,8 +173,6 @@ function borrarUna() {
 			NUMERAL = true;
 
 	}
-
-	document.getElementById("input").focus();
 };
 
 function borrarTodo() {
@@ -202,7 +221,7 @@ function ayuda() {
 	);
 }
 
-document.addEventListener("keyup", leer = function(event) {
+document.getElementById("input").addEventListener("keyup", leer = function(event) {
 	// Acción automática
 	if (letrasPuntos.indexOf(event.key) > -1) { // Si es una de las letras que equivalen a puntos
 		convertir(document.getElementById("input").value);
