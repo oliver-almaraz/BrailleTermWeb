@@ -1,20 +1,17 @@
 # BrailleTerm Web
 
-Este programa es parte de un proyecto sin fines de lucro, se trata en general de un curso gratuito para
+Este programa es parte de un proyecto sin fines de lucro, se trata en general de un [curso gratuito](https://www.udemy.com/course/braille-espanol/) para
 aprender signografía básica del braille en español destinado a usuarios videntes.
 
-### ¡Nuevo apartado de musicografía braille!
-Con un apartado diseñado especialmente para personas ciegas o con visibilidad reducida.
 
 ## [Acceder a la aplicación web](https://oliver-almaraz.github.io/BrailleTermWeb/) 
 
 
 
-### Versiones para escritorio (Windows y GNU/Linux)
+### Utilizar la aplicación sin acceso a internet
 
-Si no siempre cuentas con una conexión a internet o la pagina web no se visualiza correctamente en tu navegador
-también puedes utilizar la aplicación de escritorio de BrailleTerm en tu laptop o PC.
-Visita la sección de [releases](https://github.com/oliver-almaraz/BrailleTermWeb/releases) y descarga el la versión para tu sistema operativo.
+Si no siempre cuentas con una conexión a internet puedes descargar los archivos de la aplicación y así utilizarla desde tu navegador preferido sin internet.
+Visita la sección de [releases](https://github.com/oliver-almaraz/BrailleTermWeb/releases) y descarga la última versión.
 
 
 ### En dispositivos **Android**

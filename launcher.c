@@ -3,10 +3,10 @@ WINDOWS:
 Abre 'index.html con el navegador predeterminado
 o pregunta con qué navegador abrirlo.
 
-i686-w64-mingw32-gcc.exe -static -mwindows launcher.c icono.o -o launcher.exe
+i686-w64-mingw32-gcc.exe -static -mwindows launcher.c icono.o -o BrailleTermOffline.exe
 
 Generar un archivo autoextraíble (SFX) con WinRar que ejecute
-'.\BrailleTermWeb\launcher.exe' tras extraer los archivos.
+'.\BrailleTermWeb\BrailleTermOffline.exe' tras extraer los archivos.
 NO extraer en carpeta temporal.
 Reemplazar los archivos sin preguntar u omitir archivos existentes.
 */
@@ -23,17 +23,21 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     MessageBox(0,"Elige a continuacion tu navegador preferido si no lo has hecho ya.",
         "Iniciando BrailleTerm offline", 0);
 
-    if (access(".\\BrailleTermWeb\\index.html", F_OK ) != -1 ) {
-        system("explorer .\\BrailleTermWeb\\index.html");
+    if (access(".\\BrailleTermOffline\\index.html", F_OK ) != -1 ) {
+        system("explorer .\\BrailleTermOffline\\index.html");
     }
      else if (access(".\\index.html", F_OK ) != -1 ) {
         system("explorer .\\index.html");
     }
      else {
-        MessageBox(0,"Asegurate de que este programa se encuentre en la carpeta 'BrailleTermWeb' y vuelve a intentar.",
+        MessageBox(0,"Asegurate de que este programa se encuentre en la carpeta 'BrailleTermOffline' y vuelve a intentar.",
         "'index.html' no encontrado'", 0);
         return 1;
     }
+
+    if (access(".\\ExtraerBrailleTermOffline.exe", F_OK ) != -1 ) {
+        system("rm .\\ExtraerBrailleTermOffline.exe");
+    };
 
     return 0;
 };
