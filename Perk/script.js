@@ -154,7 +154,16 @@ function borrarUna() {
 	} else if (outputBraille[outputBraille.length -1] === "⠼") {
 		// Signo numeral últmo en outputBraille
 		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
-		NUMERAL = false;
+		if (isNaN(outputTexto[outputTexto.length -1])) {
+		// Previene un error molesto
+			NUMERAL = false;
+		}
+		actualizarFlag();
+		return;
+	} else if (outputBraille[outputBraille.length -1] === "⠐" && ! isNaN(outputTexto[outputTexto.length -1])) {
+		// Signo separador de nums últmo en outputBraille
+		document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
+		NUMERAL = true;
 		actualizarFlag();
 		return;
 	}
@@ -181,6 +190,18 @@ function borrarUna() {
 			document.getElementById("outputBraille").value = outputBraille.substring(0, outputBraille.length - 1);
 			NUMERAL = true;
 	}
+
+	outputBraille = document.getElementById("outputBraille").value;
+	outputTexto = document.getElementById("outputTexto").value;
+
+	if (! isNaN(outputTexto[outputTexto.length -1]) &&
+		// Si después de todo queda un número al final del texto
+		outputBraille[outputBraille.length -1] != "⠐" &&
+		// Y no están ni mayus ni el separador en el outputBtaille...
+		outputBraille[outputBraille.length -1] != "⠨") {
+			NUMERAL = true;
+		}
+
 	actualizarFlag();
 };
 
