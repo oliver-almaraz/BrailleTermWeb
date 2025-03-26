@@ -173,7 +173,7 @@ con puntos y O (texto)
 **********************/
 
 .letraBraille {
-    font-family: "Cutive Mono", Courier, monospace;
+    font-family: Courier, monospace;
     font-weight: bold;
     font-size: 25px;
     color: #00CDFF;
